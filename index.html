@@ -43,8 +43,9 @@
                     let li = document.createElement('li');
                     let a = document.createElement('a');
 
+                    let href = `${extraParams}${extraParams === '/' ? '' : '/'}${list.name}`;
                     a.textContent = `${list.name}`;
-                    a.href = `${extraParams}${extraParams === '/' ? '' : '/'}${list.name}`;
+                    a.href = href.replace('//','/');
                     a.alt = `${list._links.html}`;
 
                     li.appendChild(a);
