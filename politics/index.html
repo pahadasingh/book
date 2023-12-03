@@ -20,18 +20,19 @@
 </head>
 
 <body>
-
     <ul id="list"></ul>
-
     <script>
         const cURl = window.location.href;
-        const browseUrl = cURl.indexOf('localhost') !== -1 ? 'http://localhost:3000': 'https://pahadasingh.github.io';
-        const url = 'https://api.github.com/repos/pahadasingh/book/contents';
+        const isLocal = cURl.indexOf('localhost') !== -1;
+        const user = 'pahadasingh';
+        const initDir = 'book';
+        const browseUrl = isLocal ? `http://localhost:3000/${initDir}` : `https://${user}.github.io/${initDir}`;
+        const url = `https://api.github.com/repos/${user}/${initDir}/contents`;
         const ul = document.getElementById('list');
         const fragment = document.createDocumentFragment();
 
-        
-        const extraParams = cURl.replace(browseUrl, '');        
+
+        const extraParams = cURl.replace(browseUrl, '');
         const apiUrl = `${url}${extraParams}`;
 
         fetch(apiUrl)
@@ -43,9 +44,9 @@
                     let li = document.createElement('li');
                     let a = document.createElement('a');
 
-                    let href = `${extraParams}${extraParams === '/' ? '' : '/'}${list.name}`;
+                    let href = `${extraParams}/${list.name}`;
                     a.textContent = `${list.name}`;
-                    a.href = href.replace('//','/');
+                    a.href = `${browseUrl}${href.replace(/[\/]+/, '/')}`;
                     a.alt = `${list._links.html}`;
 
                     li.appendChild(a);
