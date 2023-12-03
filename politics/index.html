@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <ul id="list"></ul>
+
+    <script>
+        const cURl = window.location.href;
+        const browseUrl = cURl.indexOf('localhost') !== -1 ? 'http://localhost:3000': 'https://pahadasingh.github.io/book';
+        const url = 'https://api.github.com/repos/pahadasingh/book/contents';
+        const ul = document.getElementById('list');
+        const fragment = document.createDocumentFragment();
+
+        
+        const extraParams = cURl.replace(browseUrl, '');        
+        const apiUrl = `${url}${extraParams}`;
+
+        fetch(apiUrl)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                data.map(function (list) {
+                    let li = document.createElement('li');
+                    let a = document.createElement('a');
+
+                    a.textContent = `${list.name}`;
+                    a.href = `${extraParams}${extraParams === '/' ? '' : '/'}${list.name}`;
+                    a.alt = `${list._links.html}`;
+
+                    li.appendChild(a);
+                    fragment.appendChild(li);
+                    ul.appendChild(fragment);
+                });
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    </script>
+</body>
+
+</html>
