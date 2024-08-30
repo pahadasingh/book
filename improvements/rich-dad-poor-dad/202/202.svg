@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="0 0 660 990" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<clipPath id="c0_202"><path d="M645.3 872.8H286.7V58.2H646.5l-1.2 814.6Z"/></clipPath>
+<clipPath id="c1_202"><path d="M645.2 974.9H13.4L14.8 4.1H646.6l-1.4 970.8Z"/></clipPath>
+<clipPath id="c2_202"><path d="M79 822.1V568l13.3 .1l163 -.2V822.1Z"/></clipPath>
+<clipPath id="c3_202"><path d="M451.1 828.8V614.1H613.7V828.8Z"/></clipPath>
+<style type="text/css"><![CDATA[
+.g0_202{
+fill: none;
+stroke: #231F20;
+stroke-width: 1.527;
+}
+.g1_202{
+fill: #231F20;
+}
+.g2_202{
+fill: none;
+stroke: #FFF;
+stroke-width: 1.909;
+stroke-miterlimit: 10;
+}
+.g3_202{
+fill: none;
+stroke: #000;
+stroke-width: 0.381;
+stroke-miterlimit: 10;
+}
+]]></style>
+</defs>
+<path d="M54.8 936.6H603.3V48.1H54.8Z" class="g0_202"/>
+<image clip-path="url(#c0_202)" preserveAspectRatio="none" x="285" y="57" width="390" height="817" xlink:href="img/1.png"/>
+<path d="M54.1 891.6h550V833.5H54.1v58.1Z" class="g1_202"/>
+<image clip-path="url(#c1_202)" preserveAspectRatio="none" x="75" y="565" width="192" height="271" xlink:href="img/2.png"/>
+<image clip-path="url(#c2_202)" preserveAspectRatio="none" x="79" y="567" width="176" height="255" xlink:href="img/3.jpg"/>
+<path clip-path="url(#c1_202)" d="M289.5 679.1c0 0 -18.4 0 -18.4 18.3V805.2c0 0 0 18.4 18.4 18.4H584.7c0 0 18.3 0 18.3 -18.4V697.4c0 0 0 -18.3 -18.3 -18.3Z" class="g1_202"/>
+<image clip-path="url(#c3_202)" preserveAspectRatio="none" x="451" y="614" width="162" height="216" xlink:href="img/4.png"/>
+<g clip-path="url(#c1_202)">
+<path d="M-10 -3H-32.9m701.1 0h23M-10 986.9H-32.9m701.1 0h23M-.8 -12.2V-35.1m0 1031.2V1019M659.1 -12.2V-35.1m0 1031.2V1019" class="g2_202"/>
+<path d="M-10 -3H-32.9m701.1 0h23M-10 986.9H-32.9m701.1 0h23M-.8 -12.2V-35.1m0 1031.2V1019M659.1 -12.2V-35.1m0 1031.2V1019" class="g3_202"/>
+</g>
+</svg>
