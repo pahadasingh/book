@@ -63,7 +63,7 @@
 
                         let href = `${extraParams}/${list.name}`.replace(/[\/]+/, '/');
                         a.textContent = `${list.name}`;
-                        a.href = `${browseUrl}${extraParams}/preview.html?q=`+${list.name}`.replace(/[\/]+/, '/');
+                        a.href = `${browseUrl}${extraParams}/preview.html?q=`+list.name.replace(/[\/]+/, '/');
                         a.alt = `${list._links.html}`;
                         a.className = `${list.name}`;
 
