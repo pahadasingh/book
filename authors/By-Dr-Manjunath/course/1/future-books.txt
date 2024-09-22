@@ -31,3 +31,19 @@ The Biology of Belief
 The Power Of Self-Discipline (No Excuses!)
 Mind Power Into The 21st Century
 The Design of Everyday Things
+
+
+component achetecture --> 
+declartive template  -->  
+directives --> 
+service class & dependency injection --> 
+routing --> 
+forms ---> 
+httpClient for Rest --> 
+Test packages --> 
+Animation API --> 
+internationalisation --> 
+SSR & SSg --> 
+PWA --> 
+Performace Optimisation --> 
+Command line Tool --> 

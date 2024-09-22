@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md@3?register"></script>
+</head>
+<body>
+  <zero-md id="preview"></zero-md>
+  <script>
+	const url = new URLSearchParams(window.location.search);
+	const param = url.get('q');
+	document.getElementById('preview').setAttribute('src', `./${param}`);
+  </script>
+</body>
+</html>
