@@ -57,13 +57,13 @@
             })
             .then((data) => {
                 data.map(function (list) {
-                    if (list.name !== 'index.html' && list.name !== 'README.md') {
+                    if (list.name !== 'index.html' && list.name !== 'README.md' && list.name !== 'preview.html') {
                         let li = document.createElement('li');
                         let a = document.createElement('a');
 
                         let href = `${extraParams}/${list.name}`.replace(/[\/]+/, '/');
                         a.textContent = `${list.name}`;
-                        a.href = `${browseUrl}${href}`;
+                        a.href = `${browseUrl}${extraParams}/preview.html?q=`+list.name.replace(/[\/]+/, '/');
                         a.alt = `${list._links.html}`;
                         a.className = `${list.name}`;
 
