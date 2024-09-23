@@ -1,0 +1,48 @@
+## Beginner
+list react js interview only Questions beginners
+more..
+cont...
+
+What is React?
+What are the key features of React?
+What is JSX?
+What is the Virtual DOM, and how does it work?
+What are components in React?
+What is the difference between a functional component and a class component?
+What are props in React?
+What is the state in React?
+How do you update the state in React?
+What are React Hooks?
+What is the difference between state and props?
+What is a higher-order component (HOC)?
+What is the purpose of useEffect?
+What is lifting state up in React?
+What is a React fragment?
+What is the significance of keys in React?
+How do you handle events in React?
+What is the context API in React?
+What are controlled and uncontrolled components?
+What is React Router, and why do we use it?
+What are Pure Components in React?
+What is memo in React?
+What is useRef in React?
+What is useCallback in React?
+What is useMemo in React?
+What is Prop Drilling in React?
+What is lazy loading in React?
+What is Suspense in React?
+What is React Fiber?
+What is the purpose of error boundaries in React?
+What is the useReducer hook?
+What are controlled inputs in React forms?
+What is hydration in React?
+What is reconciliation in React?
+What is React Portals?
+What is the purpose of default props in React?
+What is a forwardRef in React?
+What is the use of StrictMode in React?
+What is React DevTools?
+What is the significance of shouldComponentUpdate in React?
+
+
+## Advanced:

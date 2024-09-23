@@ -1,0 +1,56 @@
+Laravel Interview Introduction
+What is Laravel?
+Features of Laravel?
+What is Blade Engine in Laravel?
+What is Artisan in Laravel?
+Explain Important Folders of Laravel?
+What is Reverse Routing in Laravel?
+Difference between web.php and api.php Routes?
+What is resource Controller and resource Route?
+What is ORM? List out Some Popular ORM of PHP?
+What is Eloquent ORM in Laravel?
+What is Query Builder in Laravel?
+Difference between Eloquent and Query Builder?
+What is Migration? Important Commands of Migration?
+Explain Faker and Seeder in Laravel?
+Types of Relationship in Laravel?
+What is Soft Delete in laravel? How to implement Soft Delete?
+Explain Middleware in Laravel ?
+List out common PHP Artisan Commands?
+What is lumen?
+List out some important Packages in Laravel?
+What are events in Laravel?
+What is an observer?
+What is the use of cursor method in Laravel?
+What is the use of dd() function?
+What is tinker in Laravel?
+What is throttling and how to implement in Laravel?
+Difference between authentication and authorization?
+Request Life Cycle of Laravel
+What are facades in Laravel
+What is dependency injection in Laravel
+Service Container in Laravel
+When to use Queue Job in laravel
+When to use Redis
+when to use Memcache
+What is the use of Kernel in Laravel?
+What is scheduler, running in a cron JOB?
+How Queue Workers is Continiously running? Quedriver/
+What is active listner?
+How scheduler is working for listening event.
+what is CSRF, how it works?
+require(), require_once()
+sql injection
+sql PDO methods
+supervisors which restarts the Que-worker?
+
+
+
+GPT Command: Please answer in oneline
+-------------------------------------------------
+After long days, attempting backend interviews, 
+so If I could not give you the satisfactory answer for technical round, it would be more helpful if I get second chance / second level of interview. need to overview/brush up the old skills.
+
+
+Lattest Version: 11
+Queue/Job for Task Scheduling..

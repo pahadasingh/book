@@ -1,0 +1,26 @@
+## Q. Type of no Questions
+##### Answers. Imagine someone asks you about a relatively niche library or framework you are not fully familiar with:
+
+- a. approach: not familiar / worked
+That's a good point! While I haven't worked extensively with that library recently, my approach would be to review its documentation and consider how similar tools have addressed that problem.
+
+- b. not been through: Refer to Resources
+I haven't delved deeply into that recently, but there's some great material on [specific resource], which might shed light on this.
+
+- c. complexity: Acknowledge the topic’s complexity without claiming ignorance
+That's a complex area with many nuances. My current understanding is [outline what you know], but I think it deserves deeper exploration.
+
+- d. tackling: Describe how you would find the answer
+If I were to tackle this, I would start by [mention a resource, such as documentation, forums, or books]. What do you think?
+
+- e. not sure: Offer to investigate the issue together
+I'm not completely sure about that. How about we look it up together or check the documentation?
+
+- f. ask clarity: Engage the other person with questions:
+Can you clarify what aspect you’re inquiring about? My perspective might be limited to particular contexts.
+
+- g. directly involved: Mention related areas you are familiar with
+I haven't worked directly with that specific topic recently, but I’ve dealt with [related topic]. I wonder if the principles apply here.
+
+- h. don’t know:
+That's an interesting question. My understanding is that [insert your thoughts or what you know]. What are your thoughts on this?

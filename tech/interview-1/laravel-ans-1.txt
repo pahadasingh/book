@@ -1,0 +1,331 @@
+Here’s a list of 100 beginner Laravel interview questions along with their answers. These will help you get a strong foundation when preparing for interviews. If you want more detailed or specific answers for any of these questions, feel free to ask!
+
+### 1-10: **Basic Laravel Concepts**
+1. **What is Laravel?**
+   - Laravel is a PHP web application framework that provides tools and resources to build modern PHP applications.
+
+2. **What are the main features of Laravel?**
+   - Routing, Eloquent ORM, Blade Templating Engine, Middleware, Artisan Console, Queues, and Task Scheduling.
+
+3. **What is Composer?**
+   - Composer is a dependency manager for PHP, used to install Laravel and its dependencies.
+
+4. **What is Artisan?**
+   - Artisan is the command-line interface included with Laravel, used to perform tasks like database migration, seeding, and more.
+
+5. **What is a Service Provider in Laravel?**
+   - Service providers are the central place of Laravel application bootstrapping, used to bind services into the Laravel container.
+
+6. **What are Facades in Laravel?**
+   - Facades provide a "static" interface to classes that are available in the application's service container.
+
+7. **What is Eloquent ORM in Laravel?**
+   - Eloquent ORM is an object-relational mapper (ORM) that allows you to interact with your database in an object-oriented way.
+
+8. **What is a Middleware in Laravel?**
+   - Middleware is a filter mechanism used to handle HTTP requests, such as checking user authentication or modifying request data.
+
+9. **What is a Route in Laravel?**
+   - Routes are URL endpoints that are defined to handle incoming requests and point them to specific controllers or logic.
+
+10. **How do you define a Route in Laravel?**
+    - You can define a route using the `Route::get()`, `Route::post()`, or other HTTP verbs in the `routes/web.php` file.
+
+---
+
+### 11-20: **Routing and Middleware**
+11. **What is CSRF protection in Laravel?**
+    - Cross-Site Request Forgery (CSRF) protection ensures that forms submitted via POST request are not malicious.
+
+12. **How do you pass variables to views in Laravel?**
+    - You can pass variables to a view using `return view('view-name', ['key' => 'value']);`.
+
+13. **How can you redirect in Laravel?**
+    - You can redirect using `return redirect()->route('route-name');` or `return redirect('url');`.
+
+14. **What is Route Grouping?**
+    - Route grouping allows you to share route attributes such as middleware, prefixes, and namespaces across multiple routes.
+
+15. **What is Route Model Binding?**
+    - Route model binding automatically injects a model instance directly into your routes.
+
+16. **How do you handle 404 errors in Laravel?**
+    - You can handle 404 errors using the `abort(404)` helper or customize it by creating a `404.blade.php` view.
+
+17. **What is a Named Route in Laravel?**
+    - Named routes allow you to refer to routes using a name instead of the URI.
+
+18. **What is a Controller in Laravel?**
+    - Controllers are used to handle logic behind route actions and separate business logic from presentation.
+
+19. **How do you create a Controller in Laravel?**
+    - You can create a controller using the command `php artisan make:controller ControllerName`.
+
+20. **What is Middleware used for in Laravel?**
+    - Middleware is used to filter HTTP requests, such as checking user authentication or logging requests.
+
+---
+
+### 21-30: **Controllers and Requests**
+21. **How can you validate a request in Laravel?**
+    - You can validate a request using the `$request->validate()` method or by creating a Form Request.
+
+22. **How do you create a Form Request in Laravel?**
+    - Use `php artisan make:request RequestName` to create a custom request class.
+
+23. **What is Dependency Injection in Laravel?**
+    - Dependency injection is a technique where dependencies (e.g., services) are automatically injected into classes.
+
+24. **How do you handle file uploads in Laravel?**
+    - You can handle file uploads by using the `store()` or `move()` methods on the uploaded file instance.
+
+25. **What is the purpose of the `with()` method in Laravel?**
+    - The `with()` method is used to pass flash data or session data to the view.
+
+26. **How do you access route parameters in a controller?**
+    - You can access route parameters via method arguments or using `$request->route('parameter')`.
+
+27. **What is method injection in Laravel?**
+    - Method injection allows Laravel to automatically resolve and inject dependencies into controller methods.
+
+28. **How do you handle JSON responses in Laravel?**
+    - You can return JSON responses using `return response()->json(['key' => 'value']);`.
+
+29. **How do you implement RESTful Controllers in Laravel?**
+    - Use `php artisan make:controller --resource` to create a resource controller for CRUD operations.
+
+30. **What is the difference between GET and POST requests in Laravel?**
+    - GET requests are used to retrieve data, while POST requests are used to submit or update data.
+
+---
+
+### 31-40: **Views and Blade Templates**
+31. **What is Blade in Laravel?**
+    - Blade is the templating engine used in Laravel to write PHP code in your views.
+
+32. **How do you extend a layout in Blade?**
+    - You can extend a layout using `@extends('layout-name')`.
+
+33. **What is the `@yield` directive in Blade?**
+    - `@yield` defines a section in the layout where child views can inject content.
+
+34. **What is the `@section` directive in Blade?**
+    - `@section` is used to define content in a specific section of the layout.
+
+35. **How do you include a partial view in Blade?**
+    - You can include a partial view using the `@include('partial-view')` directive.
+
+36. **What is the `@if` directive in Blade?**
+    - The `@if` directive is used for conditional statements in Blade views.
+
+37. **What is the `@foreach` directive in Blade?**
+    - The `@foreach` directive is used to loop through arrays or collections.
+
+38. **How do you escape output in Blade?**
+    - Use `{{ }}` to escape output or `{!! !!}` for unescaped output.
+
+39. **How do you use Blade components in Laravel?**
+    - You can create Blade components using `php artisan make:component ComponentName` and include them using `<x-component-name />`.
+
+40. **How can you display data from a collection in Blade?**
+    - Use the `@foreach` or `@each` directives to loop through collections and display data.
+
+---
+
+### 41-50: **Database and Eloquent**
+41. **What is Eloquent ORM?**
+    - Eloquent ORM is Laravel's built-in ORM for interacting with databases using PHP objects.
+
+42. **How do you define a model in Laravel?**
+    - Use `php artisan make:model ModelName` to create a new model.
+
+43. **What are migrations in Laravel?**
+    - Migrations are version control for your database, allowing you to modify the database schema over time.
+
+44. **How do you create a migration in Laravel?**
+    - Use `php artisan make:migration migration_name` to create a new migration file.
+
+45. **How do you run migrations in Laravel?**
+    - Run migrations using `php artisan migrate`.
+
+46. **What is a Seeder in Laravel?**
+    - Seeders are used to populate the database with initial or test data.
+
+47. **How do you create and run seeders in Laravel?**
+    - Use `php artisan make:seeder SeederName` to create a seeder and `php artisan db:seed` to run it.
+
+48. **How do you define relationships in Eloquent?**
+    - You can define relationships using `hasOne()`, `belongsTo()`, `hasMany()`, and `belongsToMany()` methods in models.
+
+49. **What is the difference between `hasOne` and `hasMany`?**
+    - `hasOne` defines a one-to-one relationship, while `hasMany` defines a one-to-many relationship.
+
+50. **What is the purpose of the `timestamps` property in Eloquent models?**
+    - The `timestamps` property automatically manages the `created_at` and `updated_at` fields in the database.
+
+---
+
+### 51-60: **Database and Eloquent (Cont.)**
+51. **What are mass assignment vulnerabilities in Laravel?**
+    - Mass assignment occurs when a user can pass unfiltered data to a model, potentially overwriting unintended fields. Laravel protects against this using `$fillable` and `$guarded` properties in the model.
+
+52. **What is the difference between `$fillable` and `$guarded` in a model?**
+    - `$fillable` defines which attributes can be mass-assigned, while `$guarded` specifies which attributes should be protected.
+
+53. **How do you retrieve all records from a table in Eloquent?**
+    - Use `Model::all()` to retrieve all records from the corresponding table.
+
+54. **How do you find a record by its primary key in Eloquent?**
+    - Use `Model::find($id)` or `Model::findOrFail($id)` to find a record by its primary key.
+
+55. **What is the purpose of `firstOrCreate()` in Eloquent?**
+    - `firstOrCreate()` retrieves the first record matching the attributes or creates it if none exist.
+
+56. **How do you perform a raw query in Laravel?**
+    - Use `DB::select()`, `DB::insert()`, `DB::update()`, and `DB::delete()` for raw queries in Laravel.
+
+57. **How do you perform soft deletes in Laravel?**
+    - Add the `SoftDeletes` trait to your model and ensure your table has a `deleted_at` column to enable soft deleting.
+
+58. **How do you retrieve only soft-deleted records in Eloquent?**
+    - Use `Model::onlyTrashed()` to retrieve only soft-deleted records.
+
+59. **How do you restore soft-deleted records in Eloquent?**
+    - Use the `restore()` method on soft-deleted records or collections.
+
+60. **How do you perform eager loading in Eloquent?**
+    - Use the `with()` method to eager load relationships, preventing N+1 query issues.
+
+---
+
+### 61-70: **Migrations and Seeders**
+61. **What is the purpose of the `Schema::table()` method in Laravel?**
+    - It allows you to modify existing tables by adding or altering columns.
+
+62. **How do you rollback a migration in Laravel?**
+    - Use the command `php artisan migrate:rollback` to undo the last migration.
+
+63. **How do you reset and rerun all migrations?**
+    - Use `php artisan migrate:refresh` to roll back all migrations and rerun them.
+
+64. **What is a foreign key in Laravel migrations?**
+    - A foreign key is a reference to the primary key in another table, used to enforce database relationships.
+
+65. **How do you add a foreign key constraint in a migration?**
+    - Use `$table->foreign('column')->references('id')->on('table');` to add a foreign key constraint.
+
+66. **What are database factories in Laravel?**
+    - Database factories are classes that define how to generate fake data for models, used for testing and seeding.
+
+67. **How do you create a factory in Laravel?**
+    - Use `php artisan make:factory FactoryName` to create a factory for a model.
+
+68. **What is `factory()->create()` used for?**
+    - `factory()->create()` is used to generate and persist a new model instance with fake data.
+
+69. **What is the purpose of `tinker` in Laravel?**
+    - Tinker is a REPL tool that allows you to interact with your Laravel application through the command line.
+
+70. **How do you run `tinker` in Laravel?**
+    - Use `php artisan tinker` to launch the Tinker REPL.
+
+---
+
+### 71-80: **Authentication and Authorization**
+71. **What is Laravel's authentication system?**
+    - Laravel provides a built-in authentication system that handles user registration, login, and password reset functionality.
+
+72. **How do you enable authentication scaffolding in Laravel?**
+    - Use `php artisan make:auth` (up to Laravel 6.x) or Jetstream/ Breeze packages in Laravel 7.x+ to scaffold authentication.
+
+73. **What is Laravel Passport?**
+    - Laravel Passport is an OAuth2 server implementation for API authentication in Laravel.
+
+74. **What is Laravel Sanctum?**
+    - Sanctum is a lightweight package for API token authentication and simple user authentication.
+
+75. **How do you use middleware to restrict access to routes?**
+    - Use middleware like `auth` or custom middleware to restrict access to authenticated users.
+
+76. **What is the purpose of Gates and Policies in Laravel?**
+    - Gates and Policies provide a way to authorize user actions, typically based on user roles or permissions.
+
+77. **How do you define a Gate in Laravel?**
+    - You can define a Gate in the `App\Providers\AuthServiceProvider` using the `Gate::define()` method.
+
+78. **What is the difference between Gates and Policies?**
+    - Gates provide a simple, closure-based authorization mechanism, while Policies are classes dedicated to authorizing actions on a particular model.
+
+79. **How do you create a Policy in Laravel?**
+    - Use `php artisan make:policy PolicyName` to create a new Policy class.
+
+80. **How do you apply a Policy to a model in Laravel?**
+    - Register the policy in `AuthServiceProvider` and use `authorize()` in controllers to apply the policy.
+
+---
+
+### 81-90: **Session and Cache**
+81. **What is Session in Laravel?**
+    - Sessions are used to store user data across multiple requests, like login information.
+
+82. **How do you access session data in Laravel?**
+    - Use `session('key')` to retrieve data and `session(['key' => 'value'])` to store data.
+
+83. **How do you flash data to the session?**
+    - Flash data is temporary and can be added using `session()->flash('key', 'value')`.
+
+84. **What is Cache in Laravel?**
+    - Cache provides an efficient way to store frequently accessed data temporarily to speed up your application.
+
+85. **How do you store items in the cache in Laravel?**
+    - Use `Cache::put('key', 'value', $minutes)` to store an item in the cache.
+
+86. **How do you retrieve cached items in Laravel?**
+    - Use `Cache::get('key')` to retrieve cached items.
+
+87. **How do you remove items from the cache in Laravel?**
+    - Use `Cache::forget('key')` to remove an item from the cache.
+
+88. **What cache drivers are supported in Laravel?**
+    - Supported cache drivers include `file`, `database`, `memcached`, `redis`, and more.
+
+89. **How do you configure the session driver in Laravel?**
+    - You can configure the session driver in the `config/session.php` file.
+
+90. **How do you enable session encryption in Laravel?**
+    - Set `'encrypt' => true` in the `config/session.php` file to enable session encryption.
+
+---
+
+### 91-100: **Testing and Debugging**
+91. **How do you write a basic test in Laravel?**
+    - Use `php artisan make:test TestName` to create a test class, and write test methods using assertions like `$this->assertTrue()`.
+
+92. **What is the difference between `Feature` and `Unit` tests in Laravel?**
+    - Unit tests focus on testing small isolated units of code, while Feature tests cover larger parts of the application, such as HTTP requests and database operations.
+
+93. **How do you run tests in Laravel?**
+    - Use `php artisan test` to run all your tests.
+
+94. **What is PHPUnit?**
+    - PHPUnit is the testing framework used by Laravel for unit and feature testing.
+
+95. **How do you debug in Laravel?**
+    - Laravel provides error pages by default. You can use tools like `dd()`, `dump()`, or `log()` for debugging.
+
+96. **What is Laravel Telescope?**
+    - Telescope is a debugging assistant for Laravel that provides real-time insights into requests, database queries, exceptions, and more.
+
+97. **How do you install Laravel Debugbar?**
+    - Use `composer require barryvdh/laravel-debugbar` to install Debugbar for detailed debugging information.
+
+98. **How do you handle exceptions in Laravel?**
+    - Exceptions are handled in the `app/Exceptions/Handler.php` file, where you can customize how exceptions are reported.
+
+99. **What is the purpose of the `.env` file in Laravel?**
+    - The `.env` file stores environment-specific configurations like database credentials, cache drivers, and API keys.
+
+100. **How do you enable debug mode in Laravel?**
+    - Set `APP_DEBUG=true` in the `.env` file to enable debug mode for detailed error messages.
+
+---

@@ -1,0 +1,348 @@
+### Introduction to Angular Framework
+
+Angular is a powerful and versatile front-end web application framework developed and maintained by Google. It is designed for building dynamic, single-page applications (SPAs) using HTML, CSS, and TypeScript, a superset of JavaScript. Angular's architecture promotes the development of modular, maintainable, and testable applications through a component-based approach.
+
+#### Key Features:
+
+1. **Component-Based Architecture:** Angular applications are built using reusable components, making it easy to manage and scale projects.
+
+2. **Dependency Injection:** This design pattern allows for better organization of code and improves testing capabilities by enabling components to receive their dependencies from an external source.
+
+3. **Two-Way Data Binding:** Angular synchronizes the model and the view, allowing changes in the UI to be reflected in the data model and vice versa.
+
+4. **Routing:** Angular provides a powerful routing mechanism, enabling developers to create single-page applications that can navigate between different views seamlessly.
+
+5. **Extensive Tooling:** Angular comes with a rich set of tools, including the Angular CLI (Command Line Interface), which simplifies project setup, development, and testing.
+
+6. **RxJS Integration:** Angular leverages RxJS for handling asynchronous operations, making it easier to manage data streams and events.
+
+With its robust features and strong community support, Angular is an excellent choice for developers looking to create high-performance web applications. Whether you’re building a small project or a large enterprise application, Angular provides the flexibility and tools necessary to meet your needs.
+
+
+
+1. **What is Angular?**
+   - Angular is a platform and framework for building single-page client applications using HTML and TypeScript.
+
+2. **What are the key features of Angular?**
+   - Key features include components, data binding, dependency injection, routing, and Angular CLI.
+
+3. **What is Angular CLI?**
+   - Angular CLI is a command-line interface tool for scaffolding, building, and managing Angular projects.
+
+4. **What is the role of TypeScript in Angular?**
+   - TypeScript provides a strongly-typed superset of JavaScript with features like classes and interfaces for Angular development.
+
+5. **What are components in Angular?**
+   - Components are building blocks of an Angular application, consisting of HTML templates, styles, and logic.
+
+6. **Explain the lifecycle hooks in Angular.**
+   - Lifecycle hooks are methods that allow you to tap into key moments of a component's lifecycle, such as `ngOnInit` and `ngOnDestroy`.
+
+7. **What is data binding in Angular?**
+   - Data binding synchronizes data between the component and the view, allowing for dynamic content updates.
+
+8. **What is dependency injection in Angular?**
+   - Dependency injection is a design pattern used to supply a component with its dependencies (services) through Angular’s injector.
+
+9. **What is an Angular module?**
+   - An Angular module is a container for a cohesive block of code, such as components, services, and other modules.
+
+10. **What are directives in Angular?**
+    - Directives are classes that add behavior to elements in Angular templates, such as structural and attribute directives.
+
+11. **What is the purpose of services in Angular?**
+    - Services provide shared business logic, data access, and other functionalities that can be injected into components.
+
+12. **What is routing in Angular?**
+    - Routing manages navigation between different views or pages within an Angular application.
+
+13. **What is a template in Angular?**
+    - A template defines the HTML view of a component, including Angular-specific syntax for binding and directives.
+
+14. **What are pipes in Angular?**
+    - Pipes transform data in templates, such as formatting dates or currency.
+
+15. **What is change detection in Angular?**
+    - Change detection is the mechanism Angular uses to track and update the view whenever the data model changes.
+
+16. **How do you handle events in Angular?**
+    - Events are handled using event bindings in templates, like `(click)="method()"`.
+
+17. **What is lazy loading in Angular?**
+    - Lazy loading loads Angular modules only when they are needed, improving application performance.
+
+18. **What is Angular Ivy?**
+    - Angular Ivy is the next-generation rendering engine and runtime for Angular, providing improved performance and smaller bundle sizes.
+
+19. **What is RxJS in Angular?**
+    - RxJS is a library for reactive programming using Observables, used for handling asynchronous events and data streams in Angular.
+
+20. **What is the difference between Promises and Observables in Angular?**
+    - Promises handle a single asynchronous event, while Observables handle multiple asynchronous events and provide more advanced features like operators.
+
+Here are concise, one-line answers for your questions:
+
+21. **What is a SPA (Single Page Application)?**
+   - A SPA loads a single HTML page and dynamically updates content without reloading the entire page.
+
+22. **What is the purpose of NgModule?**
+   - NgModule organizes related components, directives, pipes, and services into cohesive blocks of functionality.
+
+23. **What is the difference between `ngIf` and `ngFor`?**
+   - `ngIf` conditionally renders elements; `ngFor` loops over a collection to render elements.
+
+24. **How do you create and use forms in Angular?**
+   - Angular provides Reactive and Template-driven forms for handling user input and validation.
+
+25. **What is two-way data binding?**
+   - Two-way data binding allows synchronization between the data model and the view (using `[(ngModel)]`).
+
+26. **What is the role of `ngModel` in Angular forms?**
+   - `ngModel` binds form inputs to the component data model for two-way data binding.
+
+27. **What is Angular's HttpClientModule?**
+   - HttpClientModule provides HTTP communication functionalities for sending requests and handling responses.
+
+28. **How do you handle errors in Angular?**
+   - Errors are handled using the `catchError` operator in RxJS and global error handlers like `ErrorHandler`.
+
+29. **What is the difference between `ViewChild` and `ContentChild`?**
+   - `ViewChild` accesses child components in the template; `ContentChild` accesses projected content from parent components.
+
+30. **What is the purpose of `ngOnInit`?**
+   - `ngOnInit` is a lifecycle hook that runs after component initialization, ideal for data fetching.
+
+31. **What is Ahead-of-Time (AOT) compilation in Angular?**
+   - AOT compiles Angular code during the build phase, improving runtime performance and security.
+
+32. **What is the purpose of the Angular Router?**
+   - The Angular Router manages navigation between different views or pages in a single-page application.
+
+33. **What is the `@Input` decorator in Angular?**
+   - `@Input` allows a parent component to pass data to a child component.
+
+34. **What is the `@Output` decorator in Angular?**
+   - `@Output` allows a child component to emit events to the parent component.
+
+35. **What is interpolation in Angular?**
+   - Interpolation displays dynamic data from the component in the template using `{{ }}` syntax.
+
+36. **What is the difference between a pure and impure pipe?**
+   - Pure pipes run only when input data changes; impure pipes run on every change detection cycle.
+
+37. **How do you manage state in Angular?**
+   - State is managed through services, NgRx (Redux pattern), or RxJS Observables.
+
+38. **What is Angular Material?**
+   - Angular Material is a UI component library that follows Google's Material Design guidelines.
+
+39. **What is a resolver in Angular?**
+   - A resolver fetches data before navigating to a route, ensuring the necessary data is available for a component.
+
+40. **What are the differences between Angular and React?**
+   - Angular is a full-fledged framework; React is a library focused on the view layer with more flexibility and external tools.
+
+41. **What is the difference between `constructor` and `ngOnInit`?**
+   - The `constructor` initializes the component; `ngOnInit` is for initialization logic that requires component bindings.
+
+42. **What is a subject in RxJS?**
+   - A subject is a special type of Observable that allows multicasting to multiple observers.
+
+43. **What are the different types of directives in Angular?**
+   - Angular has structural directives (`ngIf`, `ngFor`) and attribute directives (`ngClass`, `ngStyle`).
+
+44. **How do you implement animations in Angular?**
+   - Angular animations are implemented using the `@angular/animations` package with the `trigger`, `state`, and `transition` methods.
+
+45. **What is the purpose of `ng-template` in Angular?**
+   - `ng-template` defines a reusable or conditional template that is not rendered unless triggered programmatically.
+
+46. **What is the difference between `ngClass` and `ngStyle`?**
+   - `ngClass` binds to CSS classes; `ngStyle` binds to inline styles.
+
+47. **How does Angular handle security?**
+   - Angular provides built-in security features like sanitization, content security policies, and HTTP client security.
+
+48. **What is Angular Universal?**
+   - Angular Universal is used for server-side rendering (SSR) of Angular applications to improve SEO and performance.
+
+49. **What is the difference between `declarations`, `providers`, and `imports` in NgModule?**
+   - `declarations` define components, `providers` register services, and `imports` include other modules.
+
+50. **How do you create a custom directive in Angular?**
+   - A custom directive is created using `@Directive` and adding logic to manipulate the DOM or apply behaviors to elements.
+
+
+51. **What are guards in Angular?**
+   - Guards control access to routes by checking conditions before navigation (e.g., `canActivate`, `canDeactivate`).
+
+52. **What is the purpose of `ng-container` in Angular?**
+   - `ng-container` groups elements without adding extra DOM elements, used for structural directives.
+
+53. **What is differential loading in Angular?**
+   - Differential loading serves modern JavaScript to newer browsers and legacy code to older browsers for better performance.
+
+54. **How does Angular handle updates and version control?**
+   - Angular uses semantic versioning and provides tools like `ng update` to help with safe updates.
+
+55. **How do you configure environment-specific settings in Angular?**
+   - Angular uses `environment.ts` files to define settings for different environments (e.g., production, development).
+
+56. **What are Angular decorators?**
+   - Decorators like `@Component` and `@Injectable` are metadata that define behavior for classes and methods in Angular.
+
+57. **What is `zone.js` in Angular?**
+   - `zone.js` enables Angular's change detection by tracking asynchronous operations.
+
+58. **What are route parameters in Angular?**
+   - Route parameters are dynamic values passed via the URL to components (e.g., `/user/:id`).
+
+59. **How do you optimize Angular applications for performance?**
+   - Optimizations include lazy loading, AOT compilation, OnPush change detection, and tree-shaking.
+
+60. **What is Angular's ElementRef?**
+   - `ElementRef` provides direct access to DOM elements from the Angular component.
+
+61. **What is the purpose of `Renderer2` in Angular?**
+   - `Renderer2` allows safe, platform-agnostic DOM manipulations in Angular.
+
+62. **What are template reference variables in Angular?**
+   - Template reference variables (`#var`) provide a way to access DOM elements or directives in templates.
+
+63. **What is the role of `ngZone` in Angular?**
+   - `ngZone` manages and optimizes Angular’s change detection outside of Angular's default zone.
+
+64. **How do you pass data between components in Angular?**
+   - Data can be passed using `@Input`, `@Output`, services, or route parameters.
+
+65. **What is ViewEncapsulation in Angular?**
+   - ViewEncapsulation determines how styles apply to components, with options like Emulated, None, and Shadow DOM.
+
+66. **How do you create reusable components in Angular?**
+   - Reusable components are created by defining a component with configurable inputs, outputs, and logic.
+
+67. **What is dynamic component loading in Angular?**
+   - Dynamic component loading allows components to be created and inserted into the DOM at runtime.
+
+68. **What is the Angular service worker?**
+   - The Angular service worker enables Progressive Web App (PWA) features like offline caching and push notifications.
+
+69. **How do you use `async` pipe in Angular?**
+   - The `async` pipe automatically subscribes to and handles Observables or Promises in templates.
+
+70. **What is the difference between `canActivate` and `canDeactivate` guards?**
+   - `canActivate` controls entry into a route, while `canDeactivate` checks if the user can leave a route.
+
+71. **How does Angular handle forms validation?**
+   - Angular forms offer built-in validators, custom validators, and error handling via `ReactiveForms` and `TemplateForms`.
+
+72. **What are async validators in Angular forms?**
+   - Async validators perform asynchronous checks (e.g., server-side validation) and return Observables.
+
+73. **How do you implement internationalization (i18n) in Angular?**
+   - Angular i18n uses translation files and Angular pipes to handle multiple languages.
+
+74. **What is the purpose of `trackBy` in `ngFor`?**
+   - `trackBy` optimizes `ngFor` performance by uniquely identifying items, reducing DOM manipulations.
+
+75. **What are `HostBinding` and `HostListener` in Angular?**
+   - `HostBinding` binds properties to the host element; `HostListener` listens to events on the host element.
+
+
+76. **How do you create a custom pipe in Angular?**
+   - Create a custom pipe using the `@Pipe` decorator and implement the `transform()` method.
+
+77. **What is Angular's TestBed?**
+   - TestBed is the primary API for writing unit tests for Angular applications.
+
+78. **How do you handle route redirects in Angular?**
+   - Route redirects are handled by configuring the `redirectTo` property in Angular routing.
+
+79. **How does Angular handle memory leaks?**
+   - Angular prevents memory leaks using RxJS operators (like `takeUntil`) and proper component destruction.
+
+80. **How do you create a singleton service in Angular?**
+   - Singleton services are created by providing them in the `root` injector or a module's `providers` array.
+
+81. **What is the difference between template-driven and reactive forms in Angular?**
+   - Template-driven forms rely on directives in templates, while reactive forms use explicit form control logic.
+
+82. **How do you debug Angular applications?**
+   - Debugging is done using browser DevTools, Angular Augury, and `console.log()` statements.
+
+83. **What is Angular's `$scope` and how is it different from `this`?**
+   - `$scope` was used in AngularJS for data binding; Angular uses `this` in components for similar purposes.
+
+84. **What are observables in Angular?**
+   - Observables represent streams of data or events that can be subscribed to and manipulated using RxJS.
+
+85. **What is the purpose of the `async` and `await` keywords in Angular?**
+   - `async` and `await` are used to handle asynchronous operations in a synchronous-like manner with Promises.
+
+86. **What is the difference between `forRoot` and `forChild` methods in Angular routing?**
+   - `forRoot` configures the root router; `forChild` configures child or feature module routes.
+
+87. **How do you implement content projection in Angular?**
+   - Content projection is implemented using `<ng-content>` tags within the component's template.
+
+88. **What is the `ngDoCheck` lifecycle hook?**
+   - `ngDoCheck` is triggered for custom change detection during every change detection cycle.
+
+89. **How do you perform unit testing in Angular?**
+   - Unit testing is performed using Jasmine and Karma by testing components, services, and pipes.
+
+90. **What is the difference between `ViewContainerRef` and `TemplateRef`?**
+   - `ViewContainerRef` represents a container for inserting views; `TemplateRef` represents an embedded template.
+
+91. **What is the purpose of `angular.json` file?**
+   - The `angular.json` file configures Angular CLI settings, such as build and serve options.
+
+92. **How does Angular handle query parameters?**
+   - Angular handles query parameters via `ActivatedRoute` and `routerLink` for dynamic URL updates.
+
+93. **How do you create a multi-module Angular application?**
+   - Create a multi-module app by splitting features into modules and importing them into the root module.
+
+94. **What is the role of Webpack in Angular?**
+   - Webpack bundles and optimizes Angular files, handling module loading and dependency management.
+
+95. **What is the purpose of the `ngSwitch` directive?**
+   - `ngSwitch` conditionally renders different templates based on the value of an expression.
+
+96. **How do you enable CORS in Angular?**
+   - CORS is enabled on the server-side; Angular uses HTTP headers to request cross-origin resources.
+
+97. **How do you implement HTTP interceptors in Angular?**
+   - HTTP interceptors are implemented by providing them in the app module and intercepting requests using the `HttpInterceptor` interface.
+
+98. **What is a schematics in Angular CLI?**
+   - Schematics are templates used by Angular CLI to generate code scaffolding (e.g., components, services).
+
+99. **How does Angular's `zone.js` handle asynchronous operations?**
+   - `zone.js` patches async APIs (like setTimeout) to trigger change detection when operations complete.
+
+100. **What is the role of the `@Injectable` decorator in Angular services?**
+   - `@Injectable` marks a class as available for dependency injection by Angular's injector system.
+
+**Summary:**
+
+Angular is a comprehensive, open-source front-end web framework developed by Google, used for building dynamic, single-page web applications (SPAs). It is based on TypeScript and offers a powerful set of tools for building scalable and maintainable applications.
+
+Key features of Angular include:
+- **Component-Based Architecture**: Angular applications are built using reusable components.
+- **Two-Way Data Binding**: Synchronizes data between the model and the view in real-time.
+- **Dependency Injection**: Makes it easy to manage service dependencies and maintain clean architecture.
+- **Routing**: Provides powerful routing features for SPA navigation and deep linking.
+- **Directives**: Allow developers to extend HTML by creating custom behaviors.
+- **Forms Management**: Supports both template-driven and reactive forms for user input.
+- **HttpClient**: Built-in service for communicating with REST APIs.
+- **Angular CLI**: Command-line interface for project scaffolding, builds, testing, and deployment.
+- **Ahead-of-Time (AOT) Compilation**: Optimizes applications by compiling HTML and TypeScript at build time, improving performance.
+- **Testing**: Built-in support for unit testing with Jasmine and end-to-end testing with Protractor.
+- **Animations**: Provides a flexible API to build animations for dynamic UIs.
+- **Internationalization (i18n)**: Easy setup for multilingual applications.
+- **Progressive Web App (PWA) Support**: Angular can build PWAs that work offline and perform like native apps.
+- **Angular Ivy**: The next-generation rendering engine for smaller bundle sizes and faster compilation.
+- **Security**: In-built protection against XSS attacks and other vulnerabilities through sanitization and content security policies.
+
+Angular is widely used for developing large-scale applications due to its modular design, strong typing, and maintainability, making it a popular choice for enterprise-level applications.
