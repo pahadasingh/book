@@ -1,0 +1,673 @@
+Here are 100 interview questions along with their answers regarding RxJS (Reactive Extensions for JavaScript), a library for composing asynchronous and event-based programs using observable sequences.
+
+### Basic RxJS Concepts
+1. **What is RxJS?**
+   - RxJS is a library for composing asynchronous and event-based programs using observable sequences and functional programming with operators.
+
+2. **What is an Observable?**
+   - An observable is a lazy collection of multiple values over time. It can emit zero or more values and can be synchronous or asynchronous.
+
+3. **What are the three types of notifications an observable can emit?**
+   - Next, Error, and Complete.
+
+4. **What is the purpose of an Observer in RxJS?**
+   - An observer is an object that subscribes to an observable and reacts to values emitted by the observable (next, error, or complete).
+
+5. **What is the difference between a cold and hot observable?**
+   - Cold observables produce values only when they are subscribed to, while hot observables produce values regardless of whether there are subscribers.
+
+6. **How do you create an observable in RxJS?**
+   - Using the `Observable` constructor or creation operators like `of()`, `from()`, `interval()`, etc.
+
+7. **What is the difference between `of()` and `from()` in RxJS?**
+   - `of()` takes multiple arguments and emits them sequentially, whereas `from()` takes an array, promise, or iterable and emits each value.
+
+8. **What is an operator in RxJS?**
+   - Operators are pure functions that enable functional programming in RxJS. They allow you to manipulate observable sequences like transforming, filtering, combining, etc.
+
+9. **What are pipeable operators in RxJS?**
+   - These are functions that can be chained using the `pipe()` method on an observable. Examples include `map()`, `filter()`, `mergeMap()`, etc.
+
+10. **How do you use an operator in RxJS?**
+    - By importing the operator and passing it inside the `pipe()` method of an observable.
+
+11. **What is `pipe()` used for in RxJS?**
+    - The `pipe()` function is used to compose operators, allowing you to chain them together to process observable emissions.
+
+12. **What is a Subscription in RxJS?**
+    - A subscription is an object that represents the execution of an observable. It provides methods to unsubscribe from the observable.
+
+13. **How do you cancel an observable subscription?**
+    - By calling the `unsubscribe()` method on the subscription object.
+
+14. **What is an `unsubscribe()` method?**
+    - It stops the observable from emitting values and releases resources.
+
+15. **What is the difference between `complete()` and `unsubscribe()`?**
+    - `complete()` is called by the observable to notify that it has finished emitting values. `unsubscribe()` is called by the subscriber to stop receiving values.
+
+### Operators in RxJS
+16. **What is the `map()` operator in RxJS?**
+    - `map()` transforms each emitted value by applying a function to each value.
+
+17. **What is the `filter()` operator in RxJS?**
+    - `filter()` filters the emitted values based on a predicate function.
+
+18. **What is the `switchMap()` operator in RxJS?**
+    - `switchMap()` switches to a new observable whenever a new value is emitted, cancelling the previous observable.
+
+19. **What is the `mergeMap()` operator in RxJS?**
+    - `mergeMap()` projects each emitted value into an observable and merges the emissions of multiple inner observables concurrently.
+
+20. **What is the `concatMap()` operator in RxJS?**
+    - `concatMap()` projects each value into an observable and concatenates the output, subscribing to each inner observable sequentially.
+
+21. **What is the `catchError()` operator in RxJS?**
+    - `catchError()` handles errors emitted by the observable and returns a new observable or error message.
+
+22. **What is the `retry()` operator in RxJS?**
+    - `retry()` re-subscribes to an observable when it encounters an error, trying to resolve it.
+
+23. **What does the `take()` operator do in RxJS?**
+    - `take()` limits the number of emitted values from an observable to a specified number.
+
+24. **What does the `takeUntil()` operator do in RxJS?**
+    - `takeUntil()` takes values from an observable until another observable emits a value.
+
+25. **What is the `debounceTime()` operator in RxJS?**
+    - `debounceTime()` delays the emission of values until the specified time has passed without another value being emitted.
+
+26. **What is `throttleTime()` in RxJS?**
+    - `throttleTime()` emits a value from the source observable and ignores subsequent source values for a specified time duration.
+
+27. **What is the `buffer()` operator in RxJS?**
+    - `buffer()` collects emitted values into an array and emits them when the provided observable emits.
+
+28. **What is the `distinctUntilChanged()` operator in RxJS?**
+    - `distinctUntilChanged()` suppresses consecutive duplicate values emitted by the observable.
+
+29. **What is `combineLatest()` in RxJS?**
+    - `combineLatest()` combines the latest values from multiple observables and emits them together whenever any observable emits a new value.
+
+30. **What is the `forkJoin()` operator in RxJS?**
+    - `forkJoin()` waits for all provided observables to complete and then emits the last values of each observable.
+
+31. **What is `startWith()` in RxJS?**
+    - `startWith()` emits a specified value before the observable starts emitting values.
+
+32. **What is the `scan()` operator in RxJS?**
+    - `scan()` applies a function to accumulate values emitted by the source observable, similar to `reduce()` in arrays.
+
+33. **What is `merge()` in RxJS?**
+    - `merge()` combines multiple observables into one observable, emitting values from all of them concurrently.
+
+34. **What is the difference between `mergeMap()` and `switchMap()`?**
+    - `mergeMap()` allows all inner observables to run concurrently, while `switchMap()` cancels previous inner observables when a new one is emitted.
+
+35. **What is the `share()` operator?**
+    - `share()` returns a new observable that shares a single subscription among multiple subscribers.
+
+36. **What is the difference between `concatMap()` and `mergeMap()`?**
+    - `concatMap()` subscribes to each inner observable sequentially, whereas `mergeMap()` allows multiple inner observables to run concurrently.
+
+37. **How does `catchError()` differ from `retry()`?**
+    - `catchError()` handles the error by returning a fallback observable, while `retry()` automatically re-subscribes to the observable when an error occurs.
+
+### Advanced RxJS
+38. **What is a Subject in RxJS?**
+    - A `Subject` is both an observable and an observer. It can multicast to multiple observers.
+
+39. **What are the types of Subjects in RxJS?**
+    - `Subject`, `BehaviorSubject`, `ReplaySubject`, and `AsyncSubject`.
+
+40. **What is the difference between `Subject` and `BehaviorSubject`?**
+    - `Subject` emits values to subscribers only after they subscribe. `BehaviorSubject` emits the last emitted value (or an initial value) to new subscribers.
+
+41. **What is a `ReplaySubject` in RxJS?**
+    - `ReplaySubject` emits a specified number of past values (buffered) to new subscribers.
+
+42. **What is an `AsyncSubject` in RxJS?**
+    - `AsyncSubject` emits the last value to its subscribers when the observable completes.
+
+43. **When should you use `BehaviorSubject` over `Subject`?**
+    - Use `BehaviorSubject` when you want to provide subscribers with the last emitted value immediately upon subscription.
+
+44. **What is multicasting in RxJS?**
+    - Multicasting allows a single observable execution to be shared by multiple subscribers, typically achieved using `Subjects`.
+
+45. **How does `shareReplay()` differ from `share()` in RxJS?**
+    - `shareReplay()` caches the last emitted values and replays them to new subscribers, while `share()` simply shares the single subscription.
+
+46. **What are higher-order observables?**
+    - Higher-order observables are observables that emit other observables.
+
+47. **How do you convert a higher-order observable to a first-order observable?**
+    - By using operators like `mergeAll()`, `switchAll()`, `concatAll()`, or `exhaustMap()`.
+
+48. **What is backpressure in RxJS?**
+    - Backpressure refers to the problem that arises when an observable emits values faster than the subscriber can process them.
+
+49. **How does the `auditTime()` operator help with backpressure?**
+    - `auditTime()` ignores emitted values for a specific time duration, reducing the rate at which the subscriber receives values.
+
+50. **How can you debounce an observable with RxJS?**
+    - By using the `debounceTime()` operator, which delays emitting values until a specific time passes without new emissions.
+
+### More Advanced and Real-World Scenarios
+
+51. **What is the purpose of `delay()` in RxJS?**
+    - `delay()` postpones the emissions of values by a specified amount of time.
+
+52. **What is the purpose of `repeat()` in RxJS?**
+    - `repeat()` resubscribes to the source observable after it completes, repeating its emission.
+
+53. **What is `exhaustMap()` and
+
+ when should you use it?**
+    - `exhaustMap()` projects each value to an inner observable, but ignores new values while the current inner observable is still running. It's useful when you want to avoid concurrency.
+
+54. **What does the `pairwise()` operator do in RxJS?**
+    - `pairwise()` groups the current and previous value as a pair and emits them as an array.
+
+55. **What is the difference between `first()` and `take(1)`?**
+    - `first()` emits the first value that matches a condition, while `take(1)` always takes the first value regardless of the condition.
+
+56. **What is a `Scheduler` in RxJS?**
+    - A scheduler controls when and how the observable delivers values to subscribers.
+
+57. **What is `asyncScheduler` in RxJS?**
+    - `asyncScheduler` schedules tasks asynchronously, typically used with time-based operators.
+
+58. **What are marble diagrams in RxJS?**
+    - Marble diagrams are a visual representation of observables, their emissions, and operators, often used to explain and reason about RxJS logic.
+
+59. **What does `window()` operator do in RxJS?**
+    - `window()` collects emitted values into a new observable (window) and emits this window observable at specified intervals.
+
+60. **What is the difference between `window()` and `buffer()`?**
+    - `window()` emits observables of collected values, while `buffer()` emits arrays of collected values.
+
+61. **How can you implement polling with RxJS?**
+    - By using `interval()` or `timer()` operators combined with `switchMap()` for making API calls at regular intervals.
+
+62. **What are cold observables in RxJS?**
+    - Cold observables start emitting values when they are subscribed to, and each subscription gets its own independent execution.
+
+63. **What are hot observables in RxJS?**
+    - Hot observables emit values whether there are subscribers or not, and subscribers share the same execution.
+
+64. **How do you convert a cold observable to a hot observable?**
+    - By using the `share()` or `publish()` operators along with `refCount()`.
+
+65. **What is the `share()` operator used for in RxJS?**
+    - `share()` turns a cold observable into a hot one, allowing multiple subscribers to share the same source observable's execution.
+
+66. **What is the purpose of `finalize()` in RxJS?**
+    - `finalize()` allows you to perform an action when the observable completes or is unsubscribed from.
+
+67. **What is `withLatestFrom()` in RxJS?**
+    - `withLatestFrom()` combines the source observable with the latest values from other observables, emitting values only when the source observable emits.
+
+68. **How does the `groupBy()` operator work in RxJS?**
+    - `groupBy()` groups values emitted by the source observable based on a key and returns a group as an observable.
+
+69. **What is `multicast()` in RxJS?**
+    - `multicast()` is an operator that shares a single subscription to the underlying observable between multiple subscribers by using a `Subject`.
+
+70. **What is the difference between `multicast()` and `share()`?**
+    - `multicast()` allows you to provide your own subject, giving more control, while `share()` uses a subject internally and is simpler to use.
+
+71. **What is `publishReplay()` in RxJS?**
+    - `publishReplay()` emits the latest buffered values to new subscribers, similar to `ReplaySubject` but with manual control over subscription.
+
+72. **What does `delayWhen()` operator do?**
+    - `delayWhen()` delays the emission of each value based on another observable.
+
+73. **How can you use `timeout()` in RxJS?**
+    - `timeout()` throws an error if the observable does not emit any values within the specified time.
+
+74. **What does the `timeInterval()` operator do?**
+    - `timeInterval()` records the time between emitted values.
+
+75. **What is `materialize()` in RxJS?**
+    - `materialize()` converts each emission, completion, and error notification into a `Notification` object.
+
+76. **What is the purpose of `dematerialize()`?**
+    - `dematerialize()` is the opposite of `materialize()`, converting `Notification` objects back into observable emissions.
+
+77. **What is `windowCount()` in RxJS?**
+    - `windowCount()` is an operator that emits windows (observables) of values collected from the source observable, with each window containing a specified number of values.
+
+78. **What is `bufferCount()` in RxJS?**
+    - `bufferCount()` collects emitted values into an array until the array reaches a specified size, and then emits the array.
+
+79. **What is `concat()` in RxJS?**
+    - `concat()` sequentially subscribes to and emits values from multiple observables, waiting for each to complete before moving on to the next.
+
+80. **How can you perform error handling with RxJS?**
+    - You can use operators like `catchError()`, `retry()`, or `retryWhen()` to handle errors.
+
+81. **What is `retryWhen()` in RxJS?**
+    - `retryWhen()` retries the observable when an error occurs, but allows for custom logic by using another observable to control the retry timing.
+
+82. **How can you implement race conditions with RxJS?**
+    - By using the `race()` operator, which subscribes to multiple observables and emits values from the first one to emit.
+
+83. **What is the purpose of `tap()` in RxJS?**
+    - `tap()` is used for side-effects, like logging or debugging, without altering the emissions of the observable.
+
+84. **What is `reduce()` in RxJS?**
+    - `reduce()` applies an accumulator function to the values emitted by the observable and returns the accumulated result when the observable completes.
+
+85. **What is `expand()` in RxJS?**
+    - `expand()` recursively emits new values based on previous values, creating a potentially infinite observable.
+
+86. **How does `shareReplay()` differ from `replay()`?**
+    - `shareReplay()` shares the source observable among subscribers and replays values to new subscribers, while `replay()` creates a `ReplaySubject` that stores past emissions for all subscribers.
+
+87. **What is a race condition in RxJS?**
+    - A race condition occurs when multiple observables are competing to emit values, and the first one to emit wins.
+
+88. **What is the `switchMapTo()` operator?**
+    - `switchMapTo()` maps each emitted value to a specified inner observable, canceling any previous inner observable in the process.
+
+89. **What does `skip()` do in RxJS?**
+    - `skip()` ignores a specified number of emissions from the source observable before starting to emit.
+
+90. **What is `defaultIfEmpty()` in RxJS?**
+    - `defaultIfEmpty()` emits a default value if the source observable completes without emitting any values.
+
+91. **What does `onErrorResumeNext()` do?**
+    - `onErrorResumeNext()` continues emitting values from a second observable when the source observable encounters an error.
+
+92. **What is `exhaust()` in RxJS?**
+    - `exhaust()` subscribes to an inner observable and ignores new emissions from the source observable while the inner observable is still active.
+
+93. **How do you throttle an observable in RxJS?**
+    - By using the `throttleTime()` or `throttle()` operators to limit the frequency of emitted values.
+
+94. **What is `bufferToggle()` in RxJS?**
+    - `bufferToggle()` opens and closes buffers based on the emissions of two other observables, collecting values into arrays.
+
+95. **What is the purpose of `defer()` in RxJS?**
+    - `defer()` creates an observable that is only created when the subscriber subscribes, useful for generating new values dynamically.
+
+96. **How do you handle errors in a pipeline with RxJS?**
+    - Using the `catchError()` operator or chaining `retry()` to handle retries when an error occurs.
+
+97. **What is the difference between `merge()` and `concat()` in RxJS?**
+    - `merge()` emits values from all observables concurrently, while `concat()` emits values from observables sequentially.
+
+98. **What is `partition()` in RxJS?**
+    - `partition()` splits the source observable into two observables: one for values that pass a condition and one for those that don’t.
+
+99. **What does `ignoreElements()` do in RxJS?**
+    - `ignoreElements()` suppresses all emitted values, but allows error and completion notifications through.
+
+100. **What is the role of functional programming in RxJS?**
+    - Functional programming plays a crucial role in RxJS by enabling you to compose pure, declarative functions to handle streams of data without modifying their original source.
+
+---
+
+Here are **50 more** advanced RxJS interview questions and answers:
+
+### Advanced Topics and Real-World Scenarios (Continued)
+
+101. **What is the difference between `switchMap()` and `exhaustMap()` in RxJS?**
+    - `switchMap()` cancels the previous inner observable when a new value is emitted, whereas `exhaustMap()` ignores new values until the current inner observable completes.
+
+102. **How does `concatMapTo()` work in RxJS?**
+    - `concatMapTo()` maps every value from the source observable to the same inner observable and subscribes to them sequentially.
+
+103. **What is `pluck()` in RxJS, and how is it used?**
+    - `pluck()` is used to extract properties from objects emitted by the observable. It acts like `map()`, but is specific to retrieving object properties.
+
+104. **What does `find()` operator do in RxJS?**
+    - `find()` emits the first value that matches the predicate function and completes. It works similarly to the `filter()` operator but emits only one value.
+
+105. **What does `audit()` operator do in RxJS?**
+    - `audit()` allows an emission from the source observable and then ignores subsequent emissions for a specified duration or until another observable emits a value.
+
+106. **Explain the `multicast()` operator with an example.**
+    - `multicast()` allows multiple subscribers to share a single subscription to the source observable. It requires a `Subject` to share the execution of the observable.
+
+    ```javascript
+    const subject = new Subject();
+    const multicasted = source$.pipe(multicast(subject));
+    multicasted.connect();
+    ```
+
+107. **How does `raceWith()` differ from `race()` in RxJS?**
+    - `raceWith()` is the updated form of `race()` that allows you to race the source observable with one or more other observables, emitting values from whichever observable emits first.
+
+108. **How does the `windowTime()` operator work?**
+    - `windowTime()` collects emitted values into an observable window for a specified time and emits the observable window when the time has passed.
+
+109. **What is the purpose of the `throwError()` operator?**
+    - `throwError()` is used to create an observable that immediately emits an error. It's useful for handling scenarios where you want to propagate errors as observables.
+
+110. **How does `race()` work in RxJS?**
+    - `race()` subscribes to multiple observables and emits values from the first observable that emits. All other observables are unsubscribed once the first one emits.
+
+111. **What is the purpose of `onErrorResumeNext()`?**
+    - `onErrorResumeNext()` allows the observable sequence to continue with another observable when an error occurs in the source observable.
+
+112. **How do you handle side effects in RxJS without modifying the observable values?**
+    - Use the `tap()` operator to introduce side effects such as logging or debugging without modifying the values emitted by the observable.
+
+113. **What is `toPromise()` in RxJS, and how is it used?**
+    - `toPromise()` converts an observable into a promise, which resolves with the last emitted value or rejects if an error occurs.
+
+    ```javascript
+    const observable = of(1, 2, 3).toPromise();
+    observable.then(value => console.log(value));
+    ```
+
+114. **How does `bufferWhen()` work?**
+    - `bufferWhen()` collects emitted values into a buffer and emits the buffer when the provided closing observable emits a value.
+
+115. **How can you debounce user input with RxJS?**
+    - You can use the `debounceTime()` operator to ignore user input events that occur too quickly and only emit values after the specified duration.
+
+    ```javascript
+    fromEvent(input, 'keyup').pipe(debounceTime(300));
+    ```
+
+116. **What is a higher-order function in RxJS?**
+    - In RxJS, higher-order functions are those that return an observable or take observables as inputs. Examples include `switchMap()`, `concatMap()`, and `mergeMap()`.
+
+117. **Explain the `timeoutWith()` operator.**
+    - `timeoutWith()` throws an error if the observable does not emit any values within a specified time but provides an alternative observable to fall back on.
+
+118. **What is `scheduler` in RxJS and how can you use it?**
+    - A scheduler is a tool that controls when and how tasks are executed, including observables. RxJS provides several built-in schedulers like `asyncScheduler` and `queueScheduler`.
+
+119. **How can you limit retries in an observable using RxJS?**
+    - Use the `retry()` operator with a number as an argument to limit the number of retries when the observable encounters an error.
+
+    ```javascript
+    source$.pipe(retry(3)).subscribe();
+    ```
+
+120. **What is the difference between `zip()` and `combineLatest()`?**
+    - `zip()` emits values only when all source observables emit, while `combineLatest()` emits whenever any source observable emits, combining the latest emitted values from each observable.
+
+121. **How does the `pairwise()` operator work?**
+    - `pairwise()` emits the current value and the previous value as an array whenever the source observable emits.
+
+122. **What is the difference between `debounce()` and `debounceTime()`?**
+    - `debounce()` delays the emission of values based on a function returning an observable, while `debounceTime()` delays by a fixed time duration.
+
+123. **What is a factory function in RxJS?**
+    - A factory function returns an observable when called. For example, `defer()` is a factory function that creates a new observable for each subscription.
+
+124. **How can you delay the observable subscription in RxJS?**
+    - You can delay subscription using the `delay()` operator, which postpones emissions by a specified amount of time.
+
+125. **What is the `throttle()` operator used for?**
+    - `throttle()` limits the frequency of emitted values from the source observable based on a time window or another observable.
+
+126. **How do you merge multiple observables using RxJS?**
+    - Use the `merge()` operator to combine multiple observables, allowing them to emit concurrently.
+
+127. **How does `delayWhen()` differ from `delay()`?**
+    - `delayWhen()` delays the emission of each value using an observable returned by a function, while `delay()` delays all emissions by a fixed duration.
+
+128. **What is the `timeInterval()` operator used for?**
+    - `timeInterval()` records the time interval between consecutive values emitted by the source observable and emits this information.
+
+129. **What is the difference between `combineLatest()` and `withLatestFrom()`?**
+    - `combineLatest()` emits values whenever any of the source observables emit, while `withLatestFrom()` emits when the primary source emits, but combines it with the latest values from other observables.
+
+130. **How does the `concatMapTo()` operator work?**
+    - `concatMapTo()` maps every value from the source observable to the same inner observable and subscribes to them one after the other.
+
+131. **What is `refCount()` in RxJS?**
+    - `refCount()` is used with `multicast()` to automatically manage subscriptions, starting and stopping the shared observable when there are active subscribers.
+
+132. **What is `dematerialize()` used for?**
+    - `dematerialize()` converts notification objects (created by `materialize()`) back into their original values or errors.
+
+133. **What is `findIndex()` in RxJS?**
+    - `findIndex()` emits the index of the first value in the source observable that matches a provided predicate function.
+
+134. **What does `finalize()` do in RxJS?**
+    - `finalize()` executes a callback function when the observable completes or is unsubscribed from, useful for cleanup logic.
+
+135. **How can you flatten higher-order observables in RxJS?**
+    - You can flatten higher-order observables using operators like `mergeAll()`, `concatAll()`, `switchAll()`, or `exhaustMap()`.
+
+136. **How does `concatMap()` help in sequencing requests?**
+    - `concatMap()` ensures that inner observables run sequentially, making it useful for chaining dependent HTTP requests.
+
+137. **How does `combineLatestAll()` work?**
+    - `combineLatestAll()` is used with higher-order observables to combine the latest values from all inner observables once all observables have emitted.
+
+138. **What is `exhaustMap()` used for?**
+    - `exhaustMap()` is used to ignore subsequent emissions from the source observable while the current inner observable is still active.
+
+139. **What is the purpose of `bufferToggle()`?**
+    - `bufferToggle()` opens and closes buffers based on signals from two other observables, allowing more control over when buffers are created and emitted.
+
+140. **What is the `race()` operator used for?**
+    - `race()` subscribes to multiple observables and emits values from whichever observable emits first, ignoring all others.
+
+141. **How can you handle backpressure in RxJS?**
+    - Operators like `throttleTime()`, `debounceTime()`, and `auditTime()` help control the rate of emissions, thereby handling backpressure.
+
+142. **What is `expand()` in RxJS?**
+    - `expand()` recursively maps each value from the source observable to an inner observable, creating a potentially infinite stream.
+
+143. **What is the purpose of `skipLast()`?**
+    - `skipLast()` skips the last
+
+ `n` values emitted by the source observable before it completes.
+
+144. **What is the `groupBy()` operator used for?**
+    - `groupBy()` groups values emitted by the source observable based on a key function and returns a grouped observable for each key.
+
+145. **What is a `ReplaySubject` in RxJS?**
+    - `ReplaySubject` stores a specified number of emitted values and replays them to new subscribers.
+
+146. **What is the purpose of `mergeAll()`?**
+    - `mergeAll()` flattens higher-order observables, subscribing to each inner observable and merging their emissions concurrently.
+
+147. **How do you implement caching with RxJS?**
+    - You can implement caching using a `ReplaySubject` or `shareReplay()`, which replays previously emitted values to new subscribers.
+
+148. **What is `retryWhen()` used for?**
+    - `retryWhen()` retries the observable when an error occurs, but allows you to specify custom logic for when and how to retry using another observable.
+
+149. **What is the difference between `catchError()` and `retry()`?**
+    - `catchError()` handles errors by recovering and returning a new observable, while `retry()` resubscribes to the source observable when an error occurs.
+
+150. **How can you control concurrent inner observables using `mergeMap()`?**
+    - You can control the concurrency by providing a `concurrent` parameter to `mergeMap()` to limit the number of active inner subscriptions.
+
+---
+
+These additional questions dig deeper into advanced RxJS concepts and will help you prepare for more complex interview questions regarding observables and reactive programming patterns.
+
+Here are **50 more** advanced RxJS interview questions and answers to continue building on your expertise:
+
+### RxJS Deep Dive and Real-World Use Cases (Part 3)
+
+151. **What does the `bufferTime()` operator do in RxJS?**
+    - `bufferTime()` collects emitted values into an array and emits the array periodically after a specified time.
+
+152. **What is the purpose of the `sampleTime()` operator?**
+    - `sampleTime()` emits the latest value from the source observable at a specified time interval, ignoring other values emitted in between.
+
+153. **How does `debounceTime()` differ from `auditTime()`?**
+    - `debounceTime()` waits for a specified time of inactivity before emitting a value, while `auditTime()` emits the most recent value after the time interval.
+
+154. **How can you use `audit()` with a signal observable?**
+    - `audit()` emits the latest value when another observable emits, useful for controlling emissions based on external events.
+
+    ```javascript
+    source$.pipe(audit(() => signal$)).subscribe();
+    ```
+
+155. **What is `windowToggle()` in RxJS?**
+    - `windowToggle()` opens and closes windows based on emissions from two observables, controlling when to collect emitted values into new observable windows.
+
+156. **What is the difference between `throttle()` and `throttleTime()`?**
+    - `throttle()` uses an observable to control when to allow values through, while `throttleTime()` uses a fixed time duration to limit emissions.
+
+157. **How can you use `switchMap()` to perform HTTP polling?**
+    - Use `switchMap()` with `interval()` to repeatedly make HTTP requests while canceling the previous request if a new one starts.
+
+    ```javascript
+    interval(5000).pipe(switchMap(() => httpRequest())).subscribe();
+    ```
+
+158. **What is `windowWhen()` in RxJS?**
+    - `windowWhen()` creates windows of emitted values based on another observable, emitting a new window when the closing observable emits.
+
+159. **What is the role of `onErrorResumeNext()` in chaining observables?**
+    - `onErrorResumeNext()` allows the observable chain to continue with a new observable if an error occurs in the source observable.
+
+160. **How can you trigger observable emissions based on user scroll events?**
+    - By using `fromEvent()` with scroll events and combining it with operators like `throttleTime()` or `debounceTime()` to handle continuous scrolling.
+
+161. **What does the `repeatWhen()` operator do in RxJS?**
+    - `repeatWhen()` resubscribes to the source observable based on the emissions from another observable, used to control when to repeat the observable.
+
+162. **How does `shareReplay()` differ from `share()`?**
+    - `shareReplay()` replays previously emitted values to new subscribers, while `share()` only shares the same observable execution without replaying past emissions.
+
+163. **What does the `maxConcurrent` parameter do in `mergeMap()`?**
+    - The `maxConcurrent` parameter limits the number of inner observables that can be active simultaneously, controlling the concurrency of merged observables.
+
+164. **What is `catchError()` used for in RxJS?**
+    - `catchError()` handles errors by catching them and returning a new observable or an error-free fallback observable.
+
+165. **How does `takeUntil()` work in RxJS?**
+    - `takeUntil()` unsubscribes from the source observable when another observable emits, preventing further emissions from the source.
+
+166. **What is the `publishBehavior()` operator?**
+    - `publishBehavior()` is similar to `BehaviorSubject`, but it multicasts the last emitted value or a default value to new subscribers.
+
+167. **How does `mergeScan()` work in RxJS?**
+    - `mergeScan()` applies an accumulator function to the source observable, similar to `scan()`, but allows asynchronous inner observables to be merged in sequence.
+
+168. **What is `withLatestFrom()` in RxJS and how is it used?**
+    - `withLatestFrom()` combines the source observable with the latest values from other observables, emitting when the source emits.
+
+169. **What is the difference between `retry()` and `retryWhen()`?**
+    - `retry()` automatically retries a failed observable, while `retryWhen()` allows you to provide custom logic using another observable to control the retry behavior.
+
+170. **How does the `takeWhile()` operator work?**
+    - `takeWhile()` emits values from the source observable as long as a specified condition is true and then completes.
+
+171. **What is the `exhaust()` operator used for?**
+    - `exhaust()` subscribes to an inner observable and ignores further emissions from the source observable until the inner observable completes.
+
+172. **What is `timeInterval()` used for in RxJS?**
+    - `timeInterval()` tracks the time between consecutive emissions from the source observable and emits both the value and the time interval.
+
+173. **How does the `dematerialize()` operator work?**
+    - `dematerialize()` converts `Notification` objects (created by `materialize()`) back into their respective observable events, like emissions, errors, or completions.
+
+174. **How can you implement a countdown timer with RxJS?**
+    - Use the `interval()` or `timer()` operators along with `take()` and `map()` to create a countdown.
+
+    ```javascript
+    timer(0, 1000).pipe(map(i => countdown - i), take(countdown));
+    ```
+
+175. **How can you debounce API requests in a search bar using RxJS?**
+    - Use `fromEvent()` on the input field, combine it with `debounceTime()` to delay API calls, and apply `switchMap()` to cancel previous requests.
+
+    ```javascript
+    fromEvent(input, 'input').pipe(debounceTime(300), switchMap(searchTerm => searchAPI(searchTerm)));
+    ```
+
+176. **What is the difference between `interval()` and `timer()` in RxJS?**
+    - `interval()` emits values at a regular interval starting immediately, while `timer()` can start after a specified delay and then emit values periodically.
+
+177. **What is `reduce()` in RxJS, and how does it work?**
+    - `reduce()` accumulates values from the source observable using an accumulator function and emits the final accumulated value when the observable completes.
+
+178. **What is the difference between `map()` and `mergeMap()` in RxJS?**
+    - `map()` transforms values emitted by the source observable, while `mergeMap()` maps each value to an inner observable and merges the emissions from all inner observables.
+
+179. **What is `delayWhen()` in RxJS?**
+    - `delayWhen()` delays the emission of each value from the source observable based on another observable returned by a function.
+
+180. **How does `share()` work in RxJS?**
+    - `share()` converts a cold observable into a hot observable, allowing multiple subscribers to share the same execution and prevent multiple subscriptions.
+
+181. **What is the purpose of `first()` in RxJS?**
+    - `first()` emits the first value that matches a condition and then completes. It can also emit the first value of the observable if no condition is provided.
+
+182. **What is the purpose of `takeLast()`?**
+    - `takeLast()` collects the last `n` values emitted by the source observable and emits them when the observable completes.
+
+183. **How can you handle multiple HTTP requests in parallel with RxJS?**
+    - Use `forkJoin()`, `combineLatest()`, or `mergeMap()` to handle multiple HTTP requests and emit combined results when all requests complete.
+
+    ```javascript
+    forkJoin([httpCall1$, httpCall2$]).subscribe();
+    ```
+
+184. **How does `concatMap()` help in executing sequential HTTP requests?**
+    - `concatMap()` ensures that each inner observable (HTTP request) completes before the next one starts, preserving the sequence of requests.
+
+185. **What is the role of `tap()` in RxJS?**
+    - `tap()` is used for performing side effects like logging or debugging, without altering the emissions of the observable.
+
+186. **What is the difference between `BehaviorSubject` and `ReplaySubject`?**
+    - `BehaviorSubject` emits the most recent value to new subscribers, while `ReplaySubject` emits a specified number of previous values to new subscribers.
+
+187. **What is a `Subject` in RxJS, and how does it differ from an observable?**
+    - A `Subject` is both an observable and an observer, meaning it can multicast values to multiple subscribers and also manually emit values using `next()`.
+
+188. **What does `materialize()` do in RxJS?**
+    - `materialize()` converts each emission, error, or completion notification into a `Notification` object, useful for debugging or observing the entire lifecycle of an observable.
+
+189. **What is the `delay()` operator in RxJS?**
+    - `delay()` postpones the emission of values from the source observable by a specified time duration.
+
+190. **How can you implement error retries in HTTP requests with RxJS?**
+    - Use `retry()` or `retryWhen()` to automatically retry failed HTTP requests.
+
+    ```javascript
+    httpRequest$.pipe(retry(3)).subscribe();
+    ```
+
+191. **What is the purpose of `ignoreElements()`?**
+    - `ignoreElements()` suppresses all emitted values from the source observable but lets error or completion notifications pass through.
+
+192. **What does `scan()` do in RxJS?**
+    - `scan()` applies an accumulator function to each emitted
+
+ value and outputs the accumulated result as the observable emits.
+
+193. **What is `concatAll()` in RxJS?**
+    - `concatAll()` flattens a higher-order observable by subscribing to each inner observable sequentially, ensuring each one completes before moving to the next.
+
+194. **How does `combineLatest()` differ from `forkJoin()`?**
+    - `combineLatest()` emits values whenever any of the source observables emit, while `forkJoin()` emits only once, when all observables complete.
+
+195. **What is `skipWhile()` in RxJS?**
+    - `skipWhile()` skips values emitted by the source observable as long as a specified condition is true, and then emits all subsequent values.
+
+196. **What does `retryWhen()` do in RxJS?**
+    - `retryWhen()` retries a failed observable based on another observable that dictates when to retry.
+
+197. **How can you use RxJS to throttle user actions?**
+    - Use `throttleTime()` or `throttle()` to control the rate of events like button clicks or form submissions.
+
+198. **What is `find()` in RxJS, and how does it work?**
+    - `find()` emits the first value from the source observable that satisfies a provided condition and completes.
+
+199. **What is `multicast()` used for in RxJS?**
+    - `multicast()` shares a single subscription among multiple subscribers using a `Subject` or similar mechanism, avoiding multiple executions of the source observable.
+
+200. **What does `bufferCount()` do in RxJS?**
+    - `bufferCount()` collects emitted values into a buffer and emits the buffer when it reaches a specified number of values.
+
+---
+
+This set of questions delves deeper into advanced usage patterns, optimizations, and real-world scenarios for handling reactive programming challenges with RxJS.
