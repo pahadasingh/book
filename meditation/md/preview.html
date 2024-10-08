@@ -6,8 +6,9 @@
 <body>
   <zero-md id="preview"></zero-md>
   <script>
+	const fileName = localStorage.getItem('f');
 	const url = new URLSearchParams(window.location.search);
-	const param = url.get('q');
+	const param = url.get('q') ?? fileName;
 	document.getElementById('preview').setAttribute('src', `./${param}`);
   </script>
 </body>
