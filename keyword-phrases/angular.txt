@@ -1,0 +1,82 @@
+---Angular Keywords
+
+avoid being
+LIFT principle
+intentionally untracked files
+represents a discrete and independent function
+shared globally across
+sophisticated
+Ensures
+Ensures component reusability
+Ensures component reusability
+Enhances overall
+Enhances overall
+easy to do debugging
+views is hierarchical
+specialized components: Dumb and Smart
+flawlessly
+maintainability and readability
+choosing an appropriate
+Single Responsibility Principle
+increases the application performance
+increases the application performance
+gets on to work
+scaling on a significant level
+bifurcated
+daunting task,
+aspiring
+robustness
+brush up your basics
+excellent scalability and maintainability
+seamless user interface
+i hope you understood what a single page application is
+testability and reusability of the code
+provides out-of-the-box solutions
+let's head to our vs code
+small crisp code
+turn it up
+depicts the aspects
+TypeScript bumped to
+serve different purposes
+about the element it is attached to
+about the element it is attached to
+typical use
+typical use
+consumes at runtime
+attach metadata
+concrete implementations
+concrete implementations
+relies on Angular's DI framework
+relies on Angular's DI framework
+can be mocked or substituted
+through abstract interfaces or indirect mechanisms
+riddle
+stance
+professional intervention
+myriad
+acuity
+perspectives
+solace and relaxation
+precision
+sudden stop can be jarring
+symmetrical
+computationally expensive
+appear janky and stuttery
+yourself by tweaking
+wayyy more expensive
+lowest-end device
+GPUs and CPUs
+telltale
+incorporate
+like quick prototype
+intuitive
+reusable
+maintainable
+concurrently
+sequentially
+subsequent subscribers
+finished emitting values
+finished emitting values
+concurrently
+shorten your code
+more slowly

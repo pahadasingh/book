@@ -1,0 +1,99 @@
+			.
+			├── Modules
+			│   ├── Category
+			│   ├── Post
+			│   └── Tag
+			├── app
+			│   ├── Authorizable.php
+			│   ├── Console
+			│   ├── Events
+			│   ├── Http ----------------- (4)
+			│   ├── Listeners
+			│   ├── Livewire
+			│   ├── Models
+			│   ├── Notifications
+			│   ├── Providers
+			│   ├── View
+			│   └── helpers.php
+			├── bootstrap
+			│   ├── app.php -------------- (2)
+			│   ├── cache
+			│   └── providers.php
+			├── config
+			│   ├── activitylog.php
+			│   ├── app.php
+			│   ├── auth.php
+			│   ├── backup.php
+			│   ├── cache.php
+			│   ├── database.php
+			│   ├── datatables.php
+			│   ├── debugbar.php
+			│   ├── filesystems.php
+			│   ├── image.php
+			│   ├── lfm.php
+			│   ├── livewire.php
+			│   ├── log-viewer.php
+			│   ├── logging.php
+			│   ├── mail.php
+			│   ├── media-library.php
+			│   ├── module-manager.php
+			│   ├── permission.php
+			│   ├── queue.php
+			│   ├── services.php
+			│   ├── session.php
+			│   └── setting_fields.php
+			├── database
+			│   ├── factories
+			│   ├── migrations
+			│   └── seeders
+			├── lang
+			│   ├── bn.json
+			│   ├── en
+			│   ├── en.json
+			│   ├── fa
+			│   ├── hi.json
+			│   ├── vendor
+			│   ├── vi
+			│   └── vi.json
+			├── public
+			│   ├── build
+			│   ├── favicon.ico
+			│   ├── humans.txt
+			│   ├── img
+			│   ├── index.php ----------- (1)
+			│   ├── js
+			│   ├── robots.txt
+			│   └── vendor
+			├── resources
+			│   ├── css
+			│   ├── js
+			│   ├── sass
+			│   ├── vendors
+			│   └── views
+			├── routes
+			│   ├── auth.php
+			│   ├── console.php
+			│   └── web.php ------------- (3)
+			├── storage
+			│   ├── app
+			│   ├── debugbar
+			│   ├── framework
+			│   └── logs
+			├── tests
+			│   ├── Feature
+			│   ├── TestCase.php
+			│   └── Unit
+			├── artisan
+			├── composer.json
+			├── composer.lock
+			├── docker-compose.yml
+			├── modules_statuses.json
+			├── tailwind.config.js
+			├── package.json
+			├── phpunit.xml
+			├── postcss.config.js
+			├── LICENSE.md
+			├── README.md
+			├── SECURITY.md
+			├── vite.config.js
+			└── yarn.lock

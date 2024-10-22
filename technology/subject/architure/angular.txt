@@ -1,0 +1,85 @@
+
+
+			├── .
+			├── src
+			│   ├── assets
+			│   │   ├── images
+			│   │   ├── fonts
+			│   │   ├── translations
+			│   │   └── styles
+			│   │      └── global.scss
+			│   ├── app
+			│   ├── ├── app.module.ts    --------------------------(3)
+			│   ├── ├── app-routing.module.ts ---------------------(4)
+			│   ├── ├── app.component.ts --------------------------(5)
+			│   ├── ├── shared
+			│   │   │   ├── shared.module.ts
+			│   │   │   ├── components
+			│   │   │   ├── directives
+			│   │   │   ├── pipes
+			│   │   │   ├── services
+			│   │   │   └── components
+			│   ├── ├── core
+			│   │   │   ├── services
+			│   │   │   │   ├── auth.service.ts
+			│   │   │   │   ├── api.service.ts
+			│   │   │   ├── guards
+			│   │   │   │   └── auth.guard.ts
+			│   │   │   └── core.module.ts
+			│   ├── ├── cms
+			│   │   │   ├── container
+			│   │   │   │   ├── ModuleA
+			│   │   │   │   ├── ModuleB
+			│   │   │   │   ├── ModuleC
+			│   │   │   │   └── ....
+			│   │   │   ├── components
+			│   │   │   ├── constants
+			│   │   │   ├── combine-stores
+			│   │   │   └── cms.module.ts
+			│   ├── ├── dashboard
+			│   │   │   ├── dashboard.module.ts
+			│   │   │   └── components
+			│   ├── ├── auth
+			│   │   │   ├── auth.module.ts
+			│   │   │   ├── login
+			│   │   │   └── register
+			│   ├── ├── user
+			│   │   │   ├── models
+			│   │   │   │   ├── user.model.ts
+			│   │   │   ├── components
+			│   │   │   │   ├── user-list
+			│   │   │   │   └── user-detail
+			│   │   │   ├── templates
+			│   │   │   ├── directives
+			│   │   │   ├── pipes
+			│   │   │   ├── constants
+			│   │   │   │   └── user.constants.ts
+			│   │   │   ├── mocks
+			│   │   │   │   └── user.mock.ts
+			│   │   │   ├── store
+			│   │   │   │   ├── actions
+			│   │   │   │   ├── reducers
+			│   │   │   │   ├── effects
+			│   │   │   │   └── selectors
+			│   │   │   └── user.module.ts
+			│   ├── docs
+			│   │   ├── analytics.md
+			│   │   ├── backend-proxy.md
+			│   │   ├── coding-guides
+			│   │   ├── corporate-proxy.md
+			│   │   ├── i18n.md
+			│   │   ├── readme.md
+			│   │   ├── routing.md
+			│   │   └── updating.md
+			├── index.html --------------------------(1)
+			├── main.ts    --------------------------(2)
+			├── README.md
+			├── angular.json
+			├── jest.config.js
+			├── ngsw-config.json
+			├── package.json
+			├── proxy.conf.js
+			├── tsconfig.app.json
+			├── tsconfig.json
+			├── tsconfig.spec.json
+			└── tslint.json

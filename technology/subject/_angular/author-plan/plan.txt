@@ -1,0 +1,132 @@
+New foreign 
+===========================
+Start Up Company
+1. Soft skill
+2. Prepapre the technology from fundamental label
+3. 
+4. 
+---------------------------
+5. 
+6. 
+7. 
+
+1. Read full book ---> download the content in .md keep in a sequence ----> same time execute files to a directory
+2. 
+
+=========================================================
+  CSS             [ https://developer.mozilla.org/docs/Web/CSS                     ]
+❯ Sass (SCSS)     [ https://sass-lang.com/documentation/syntax#scss                ]
+  Sass (Indented) [ https://sass-lang.com/documentation/syntax#the-indented-syntax ]
+  Less            [ http://lesscss.org    
+  
+  1. SSR/SSG
+  2. StandAlone
+  3. 
+  
+  
+  
+ =========================TASK===============================
+ 1. install SSR/SSG
+ 2. Install Internationalisation
+	 - $ng add @angular/localize
+	 - $ng extract-i18n
+	 - ng build --localize
+	 ---ng build --configuration=production,fr      -------------> Individual langulage Build Files
+	 - ng extract-i18n --output-path src/locale --format=json
+	 --- ng serve --configuration=fr --open
+	 - npm install @ngx-translate/core @ngx-translate/http-loader
+	 - https://rentry.co/9rc9n26i
+	 - https://lokalise.com/blog/angular-i18n/
+		
+	 
+ 3. install pwa/service-worker/notification
+ 4. install animation api
+ 5. install custom lib
+ 
+ 
+ 6. set up assets
+ 7. set up multiple pages / routing
+ 8. set up API http client module
+ 9. ngRx Setup
+ 10. material cdk setup
+ 
+ 11. install d3 charts
+ 12. install babylon js
+ 13. unit testing using jest
+ 14. e2e testing using cypress
+ 15. marble testing for obseravbles
+ 
+ 16. stencil web-componet
+ 17. reactjs project included
+ 18. version degrading....
+ 19. notification configure with Team like General, Teams, XYZ, ....
+ 20. Need of a standalone component
+	 - https://rentry.co/7bmqbm8w
+	 - development speed with independent developer
+	 - easy integration inside(dynamic widgets in container) and outside(in react application, other angular project)
+	 - micro application where module sys is not required
+	 
+ 21. can module system and standalone work together in application to dynamically load the widgets, ex....
+ 
+ 22. CSS Framework
+	- PrimeNG
+	- TaiwlindUI
+	- TaigaUI
+	- KendoUI
+	- ngZorro (Ant Design)
+	- 
+	
+ 23. Code Module - header, footer, navbar, sidebar, interceptors, guard, constants, enums, utils, and universal models
+     Shared Module - components, directives, and pipes
+				   - must not define the services here(may create a new instance of the service if imported in the lazy-loaded modules)
+				   - should not be depended on other modules - to avoid circular ref
+	 Features Module - Module1, Module2, Module3, Module4,....
+	 
+24. Perfomance improvement guides
+	- change detection, lazy loading, others...
+	
+25. Ref
+	- https://www.thinkitive.com/blog/angular-best-practices-tips-for-project-structure-and-organization/
+	- 
+	
+26. DSA
+	- https://www.geeksforgeeks.org/top-100-data-structure-and-algorithms-dsa-interview-questions-topic-wise/
+	
+27. Some Doubts
+	- All Kind of component selectors
+	ex. @Component({
+			selector: 'button[baseButton]',
+			....
+		})
+ 
+ ========================CONCEPTS=====================================
+1. :root, :host, :host-context(), ::deep
+2. netstat -ano | findstr :<PORT>
+	taskkill /PID <PID> /F
+	npx kill-port 8080
+3. 
+
+
+
+###### NG Questions ###################
+
+output(), @ouptut()
+@ViewChild(CustomCardHeader, {static: true})
+@ViewChild('fragmentOne', {read: TemplateRef})
+@ContentChild(CustomToggle)
+@ContentChild(ExpandoContent, {read: TemplateRef})
+constructor(private viewContainer: ViewContainerRef) {}
+his.advancedSettings = await import('path/to/advanced_settings.js');
+
+
+
+############  Bonuses #################
+css @: https://rentry.co/4g4k7vht
+Css Function: https://rentry.co/ousy9ame
+
+transition-delay: 300ms;
+transition: transform 450ms;
+
+
+https://www.google.com/search?kgmid=/g/11fl0wg8pr
+https://chatgpt.com/?q=Sraban%20Kumar%20Pahadasingh

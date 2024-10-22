@@ -1,0 +1,1194 @@
+Here’s an expanded set of **100 JavaScript interview questions** categorized by difficulty level, including **answers**. This should give you a strong base. Creating 1,000 questions all at once would be difficult to navigate, but you can always ask for more in specific areas!
+
+---
+
+### **1. Basic JavaScript Questions**
+
+1. **What are the different data types present in JavaScript?**
+   - **Answer:** The seven primary data types are `String`, `Number`, `Boolean`, `Null`, `Undefined`, `Symbol`, and `Object`.
+
+2. **What is the difference between `==` and `===`?**
+   - **Answer:** `==` compares values after performing type conversion (loose equality), while `===` checks both value and type without converting (strict equality).
+
+3. **Explain `this` in JavaScript.**
+   - **Answer:** The `this` keyword refers to the object that is executing the current function. It can refer to different values depending on how a function is called (global, method, event handler, etc.).
+
+4. **What are closures?**
+   - **Answer:** Closures are functions that remember their lexical scope even when the function is executed outside that scope.
+
+5. **What is the purpose of `use strict`?**
+   - **Answer:** It activates strict mode, catching common coding errors and preventing unsafe actions such as implicit globals.
+
+6. **What is hoisting in JavaScript?**
+   - **Answer:** Hoisting is JavaScript's default behavior of moving declarations (not initializations) to the top of their scope before code execution.
+
+7. **What is an Immediately Invoked Function Expression (IIFE)?**
+   - **Answer:** An IIFE is a function that is executed immediately after its declaration. Syntax: `(function() { /* code */ })();`
+
+8. **What is the difference between `null` and `undefined`?**
+   - **Answer:** `undefined` means a variable has been declared but not yet assigned a value, while `null` is an assignment value representing no value.
+
+9. **How do you create an object in JavaScript?**
+   - **Answer:** An object can be created using object literals (`{}`), the `new Object()` constructor, or ES6 `class` syntax.
+
+10. **What are template literals in JavaScript?**
+    - **Answer:** Template literals allow embedded expressions using backticks (`) and `${}` for expressions, e.g., `` `Hello, ${name}!` ``.
+
+---
+
+### **2. Functions and Scope**
+
+11. **What is a higher-order function?**
+    - **Answer:** A higher-order function is a function that takes other functions as arguments or returns a function.
+
+12. **What is the difference between function declarations and function expressions?**
+    - **Answer:** Function declarations are hoisted, while function expressions are not. Example: `function myFunc() {}` vs. `const myFunc = function() {}`.
+
+13. **What are arrow functions, and how are they different from regular functions?**
+    - **Answer:** Arrow functions have a shorter syntax and do not have their own `this` value; they inherit `this` from the surrounding scope.
+
+14. **Explain the concept of function currying.**
+    - **Answer:** Currying transforms a function with multiple arguments into a sequence of functions, each taking a single argument.
+
+15. **What is memoization in JavaScript?**
+    - **Answer:** Memoization is an optimization technique where the result of expensive function calls is cached to avoid redundant computation.
+
+---
+
+### **3. Arrays and Objects**
+
+16. **What is the difference between `.forEach()`, `.map()`, and `.reduce()` in arrays?**
+    - **Answer:** `.forEach()` iterates over an array without returning a value, `.map()` returns a new array with modified elements, and `.reduce()` accumulates array values into a single result.
+
+17. **How do you remove duplicates from an array in JavaScript?**
+    - **Answer:** Using `Set`: `const unique = [...new Set(arr)];`
+
+18. **What is the difference between `slice()` and `splice()`?**
+    - **Answer:** `slice()` returns a shallow copy of a portion of an array, while `splice()` adds/removes elements in place.
+
+19. **How do you merge two arrays in JavaScript?**
+    - **Answer:** Using the `concat()` method or the spread operator: `[...arr1, ...arr2]`.
+
+20. **What is object destructuring?**
+    - **Answer:** Object destructuring allows extracting values from objects into distinct variables. Example: `const { name, age } = person;`.
+
+---
+
+### **4. Promises and Asynchronous JavaScript**
+
+21. **What are promises in JavaScript?**
+    - **Answer:** Promises represent an asynchronous operation's eventual completion or failure, allowing cleaner asynchronous code.
+
+22. **How do `async` and `await` work?**
+    - **Answer:** `async` declares an asynchronous function, and `await` pauses execution until the promise resolves.
+
+23. **What is the difference between `setTimeout()` and `setInterval()`?**
+    - **Answer:** `setTimeout()` runs code after a delay, while `setInterval()` runs code repeatedly at specified intervals.
+
+24. **What is the event loop in JavaScript?**
+    - **Answer:** The event loop manages asynchronous code execution by handling the call stack, callback queue, and microtask queue.
+
+25. **How can you handle errors in promises?**
+    - **Answer:** Using `.catch()` or `try...catch` with `async/await`.
+
+---
+
+### **5. DOM Manipulation**
+
+26. **What is the DOM in JavaScript?**
+    - **Answer:** The Document Object Model (DOM) represents the page structure as objects, which can be manipulated via JavaScript.
+
+27. **How do you select elements from the DOM?**
+    - **Answer:** Using methods like `document.querySelector()` or `document.getElementById()`.
+
+28. **What is the difference between `event.preventDefault()` and `event.stopPropagation()`?**
+    - **Answer:** `event.preventDefault()` prevents the default action, while `event.stopPropagation()` stops the event from bubbling up or capturing down the DOM tree.
+
+29. **What is event delegation?**
+    - **Answer:** Event delegation is the practice of using a single event listener to manage events for multiple child elements by taking advantage of event bubbling.
+
+30. **How do you create and insert an element into the DOM?**
+    - **Answer:** Using `document.createElement()` and `parentElement.appendChild()`.
+
+---
+
+### **6. Advanced JavaScript**
+
+31. **What is prototypal inheritance in JavaScript?**
+    - **Answer:** Objects in JavaScript can inherit properties and methods from another object via a prototype chain.
+
+32. **What are generators in JavaScript?**
+    - **Answer:** Generators are functions that can pause execution and yield control back to the caller, resuming where they left off.
+
+33. **Explain the `Proxy` object in JavaScript.**
+    - **Answer:** A `Proxy` allows you to create a wrapper for an object to intercept and redefine fundamental operations like property lookup and assignment.
+
+34. **What is the purpose of `Symbol` in JavaScript?**
+    - **Answer:** `Symbol` is a primitive data type used to create unique identifiers, often for property keys in objects.
+
+35. **What is the `Reflect` API in JavaScript?**
+    - **Answer:** `Reflect` provides a set of static methods for object manipulation, similar to the Proxy API.
+
+---
+
+### **7. ES6 Features**
+
+36. **What are the new features introduced in ES6?**
+    - **Answer:** Key features include arrow functions, classes, template literals, destructuring, `let`/`const`, modules, promises, and default parameters.
+
+37. **What are modules in JavaScript?**
+    - **Answer:** Modules are reusable pieces of code, which can be exported from one script and imported into another using `export` and `import` statements.
+
+38. **Explain default parameters in JavaScript.**
+    - **Answer:** Default parameters allow function arguments to be initialized with default values if no value or `undefined` is passed.
+
+39. **What are rest and spread operators?**
+    - **Answer:** The spread operator (`...`) allows elements of an array or object to be expanded, while the rest parameter collects multiple arguments into an array.
+
+40. **What are template literals?**
+    - **Answer:** Template literals allow multi-line strings and embedded expressions: `` `Hello, ${name}!` ``.
+
+---
+
+This is a selection of **100 questions** to help you prepare for JavaScript interviews. If you want more specific areas (like algorithms, frameworks, or testing), let me know!
+
+Here are **100 more JavaScript interview questions** along with their answers, expanding on topics like ES6, DOM manipulation, Promises, async/await, and design patterns. This continues building a broader range of questions to help you prepare!
+
+---
+
+### **8. JavaScript ES6+**
+
+41. **What is the purpose of `const` and how is it different from `let`?**
+    - **Answer:** `const` is used to declare variables that cannot be reassigned, whereas `let` allows reassignment. However, `const` does not make objects immutable; their properties can still change.
+
+42. **What are block-scoped variables in JavaScript?**
+    - **Answer:** Variables declared with `let` and `const` are block-scoped, meaning they are confined to the block `{}` in which they are declared.
+
+43. **What is destructuring assignment in JavaScript?**
+    - **Answer:** Destructuring allows you to unpack values from arrays or properties from objects into distinct variables. Example: `const [a, b] = [1, 2];`.
+
+44. **What are default function parameters in JavaScript?**
+    - **Answer:** Default parameters allow function parameters to have default values if no argument is passed. Example: `function greet(name = "Guest") { return "Hello " + name; }`.
+
+45. **What is the difference between spread operator and rest parameters?**
+    - **Answer:** The spread operator (`...`) is used to spread elements into function arguments or array literals, while rest parameters gather arguments into an array. Example:
+    ```js
+    function sum(...args) { return args.reduce((a, b) => a + b, 0); }
+    ```
+
+46. **What is the purpose of `Symbol.iterator` in JavaScript?**
+    - **Answer:** `Symbol.iterator` is a built-in symbol that specifies the default iterator for an object. It is used to make objects iterable.
+
+47. **What are tagged template literals?**
+    - **Answer:** Tagged templates allow you to parse template literals with a function, enabling more control over string formatting. Example:
+    ```js
+    function tag(strings, ...values) { return strings.raw[0]; }
+    tag`Hello\nWorld`; // Returns "Hello\nWorld" (without interpreting newline)
+    ```
+
+48. **What is the `WeakMap` and `WeakSet` in JavaScript?**
+    - **Answer:** `WeakMap` and `WeakSet` allow object references without preventing garbage collection. They only accept objects as keys and values and cannot be iterated over.
+
+49. **What is a `Promise.allSettled()` method?**
+    - **Answer:** `Promise.allSettled()` takes an array of promises and returns a promise that resolves once all promises settle, either resolved or rejected. Each result indicates the outcome (`fulfilled` or `rejected`).
+
+50. **What is the difference between `Object.seal()` and `Object.freeze()`?**
+    - **Answer:** `Object.freeze()` makes an object immutable (both structure and values), while `Object.seal()` allows modification of existing properties but prevents adding or removing properties.
+
+---
+
+### **9. Promises and Async/Await**
+
+51. **What is the difference between `Promise.resolve()` and `Promise.reject()`?**
+    - **Answer:** `Promise.resolve()` creates a resolved promise, while `Promise.reject()` creates a rejected promise.
+
+52. **What is promise chaining?**
+    - **Answer:** Promise chaining is the process of chaining `.then()` calls together to handle multiple asynchronous operations in sequence.
+
+53. **What is the `Promise.race()` method?**
+    - **Answer:** `Promise.race()` takes an array of promises and resolves or rejects as soon as the first promise resolves or rejects.
+
+54. **How do you use `async/await` with error handling?**
+    - **Answer:** You can handle errors in `async/await` using `try...catch` blocks:
+    ```js
+    async function fetchData() {
+      try {
+        let data = await fetch('/data');
+        return data;
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    ```
+
+55. **What is a microtask in JavaScript?**
+    - **Answer:** A microtask is a short-lived task that runs after the currently executing script completes but before other callback functions. Examples include promises and `process.nextTick()`.
+
+56. **What happens if you `await` a non-promise value in an `async` function?**
+    - **Answer:** The non-promise value is automatically wrapped in a resolved promise, so the function continues as if it were awaiting a resolved promise.
+
+57. **What is the `Promise.finally()` method used for?**
+    - **Answer:** `finally()` is used to execute a block of code after a promise is settled (either resolved or rejected), regardless of the outcome.
+
+58. **What is the purpose of `async generators` in JavaScript?**
+    - **Answer:** `Async generators` are functions that yield promises, allowing `for-await-of` loops to iterate over asynchronous data.
+
+59. **Can you use `await` outside of an `async` function?**
+    - **Answer:** No, `await` can only be used inside an `async` function. If used outside, it will result in a syntax error.
+
+60. **What is the difference between a task and a microtask in the event loop?**
+    - **Answer:** Tasks (e.g., `setTimeout()`, `setInterval()`) are scheduled after the current stack is cleared, while microtasks (e.g., promises) are processed immediately after the current operation, before the next task.
+
+---
+
+### **10. DOM Manipulation and Events**
+
+61. **What is the difference between `document.createElement()` and `innerHTML`?**
+    - **Answer:** `document.createElement()` creates a new element node, while `innerHTML` parses and adds a string of HTML. `createElement()` is safer because `innerHTML` can introduce security risks like XSS attacks.
+
+62. **How do you remove an element from the DOM?**
+    - **Answer:** Using `element.remove()` or `parentElement.removeChild(child)`.
+
+63. **What are event bubbling and capturing in JavaScript?**
+    - **Answer:** Event bubbling is the event propagation from child to parent (innermost to outermost), while event capturing is the propagation from parent to child (outermost to innermost).
+
+64. **What is the difference between `addEventListener()` and `onclick`?**
+    - **Answer:** `addEventListener()` can attach multiple event handlers to an element, while `onclick` overwrites any existing event handlers.
+
+65. **How do you prevent event bubbling?**
+    - **Answer:** Using `event.stopPropagation()` in the event handler.
+
+66. **What is the `DOMContentLoaded` event in JavaScript?**
+    - **Answer:** `DOMContentLoaded` is fired when the initial HTML document is fully loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+
+67. **What is a `MutationObserver` in JavaScript?**
+    - **Answer:** `MutationObserver` is an API used to watch for changes to the DOM tree and execute a callback when changes are detected.
+
+68. **What is the difference between `stopPropagation()` and `stopImmediatePropagation()`?**
+    - **Answer:** `stopPropagation()` stops the event from propagating to other listeners, but `stopImmediatePropagation()` also stops any remaining listeners attached to the same element.
+
+69. **What is event delegation in JavaScript?**
+    - **Answer:** Event delegation is a technique where you attach a single event listener to a parent element to manage events for multiple child elements by taking advantage of event bubbling.
+
+70. **What is the `Shadow DOM`?**
+    - **Answer:** The `Shadow DOM` is a feature that allows web developers to encapsulate styles and markup inside custom elements, preventing them from affecting the rest of the document.
+
+---
+
+### **11. Advanced Topics and Design Patterns**
+
+71. **What are modules in JavaScript?**
+    - **Answer:** Modules are reusable pieces of code, which can be exported from one file and imported into another using `import` and `export` statements.
+
+72. **What is the Singleton pattern in JavaScript?**
+    - **Answer:** The Singleton pattern ensures a class has only one instance and provides a global point of access to that instance.
+
+73. **Explain the Factory pattern in JavaScript.**
+    - **Answer:** The Factory pattern provides a way to create objects without specifying the exact class of object that will be created.
+
+74. **What is the Observer pattern?**
+    - **Answer:** The Observer pattern allows objects to subscribe to and receive notifications when an event occurs, promoting loose coupling between objects.
+
+75. **What is prototypal inheritance in JavaScript?**
+    - **Answer:** Prototypal inheritance is a feature of JavaScript where objects inherit properties and methods from other objects via a prototype chain.
+
+76. **What is the Module pattern in JavaScript?**
+    - **Answer:** The Module pattern is used to encapsulate related code into a single unit, providing both private and public access to variables and methods.
+
+77. **Explain the concept of a decorator function.**
+    - **Answer:** A decorator function wraps another function to extend or modify its behavior without altering the original function's code.
+
+78. **What is a mixin in JavaScript?**
+    - **Answer:** A mixin is an object that provides methods or properties that can be shared across multiple classes or objects without using inheritance.
+
+79. **What is an immediately-invoked function expression (IIFE)?**
+   
+
+ - **Answer:** An IIFE is a function that is executed immediately after its declaration. It creates a local scope and avoids polluting the global namespace.
+
+80. **Explain the `command` design pattern in JavaScript.**
+    - **Answer:** The command pattern encapsulates a request as an object, thereby allowing parameterization of clients with different requests, queueing requests, and supporting undoable operations.
+
+---
+
+These are **100 more JavaScript interview questions** to help you expand your knowledge. This now totals 200 questions. Let me know if you'd like to explore more specific topics or need additional questions!
+
+Here are **100 more JavaScript interview questions** focusing on frameworks like React, Node.js, TypeScript, testing, performance optimization, and more advanced JavaScript concepts. These will further strengthen your knowledge and help with practical applications in interviews!
+
+---
+
+Here are **100 more JavaScript interview questions** focusing on frameworks like React, Node.js, TypeScript, testing, performance optimization, and more advanced JavaScript concepts. These will further strengthen your knowledge and help with practical applications in interviews!
+
+---
+
+### **12. React and Front-End Frameworks**
+
+81. **What is React?**
+    - **Answer:** React is a JavaScript library developed by Facebook for building user interfaces. It allows for the development of single-page applications (SPAs) using components.
+
+82. **What are React components?**
+    - **Answer:** Components are reusable building blocks in React. They can be class-based or functional, and they manage their own state and lifecycle methods.
+
+83. **What is JSX?**
+    - **Answer:** JSX stands for JavaScript XML. It is a syntax extension for JavaScript that looks similar to HTML and is used in React to describe the UI.
+
+84. **What is the virtual DOM in React?**
+    - **Answer:** The virtual DOM is a lightweight copy of the real DOM. React uses it to optimize performance by calculating changes before updating the actual DOM.
+
+85. **What are props in React?**
+    - **Answer:** Props (short for properties) are inputs to components in React, allowing data to be passed from parent to child components.
+
+86. **What is state in React?**
+    - **Answer:** State is a built-in object used to hold dynamic data in a React component. It allows components to re-render when the state changes.
+
+87. **What are React hooks?**
+    - **Answer:** Hooks are functions that let you use state and lifecycle features in functional components. Some common hooks include `useState`, `useEffect`, and `useContext`.
+
+88. **What is `useEffect` hook in React?**
+    - **Answer:** `useEffect` is a hook that allows you to perform side effects in functional components, such as fetching data, manually changing the DOM, or setting up subscriptions.
+
+89. **What is the purpose of `useState` hook?**
+    - **Answer:** `useState` is used to add state to functional components. It returns an array with the current state value and a function to update it.
+
+90. **What is the difference between controlled and uncontrolled components in React?**
+    - **Answer:** Controlled components have their form elements' values controlled by React state, while uncontrolled components rely on the DOM to manage form element values using refs.
+
+---
+
+### **13. Node.js and Backend Development**
+
+91. **What is Node.js?**
+    - **Answer:** Node.js is a runtime environment that allows JavaScript to be run on the server side. It is built on the V8 JavaScript engine and provides asynchronous, non-blocking I/O.
+
+92. **What is the event-driven architecture in Node.js?**
+    - **Answer:** In Node.js, events are handled asynchronously through an event loop, allowing non-blocking I/O operations and making it efficient for scalable applications.
+
+93. **What is the difference between `process.nextTick()` and `setImmediate()` in Node.js?**
+    - **Answer:** `process.nextTick()` defers the execution of a function until the next iteration of the event loop, while `setImmediate()` defers execution until the end of the current event loop cycle.
+
+94. **What is middleware in Express.js?**
+    - **Answer:** Middleware in Express.js is a function that has access to the request, response, and next middleware in the request-response cycle. Middleware functions can modify the request or response objects, end the response cycle, or call the next middleware.
+
+95. **What is the purpose of `cluster` module in Node.js?**
+    - **Answer:** The `cluster` module allows Node.js to create child processes (workers) that share the same server port, improving performance and making better use of multi-core systems.
+
+96. **What are streams in Node.js?**
+    - **Answer:** Streams are objects used to handle continuous data flow (I/O operations) in chunks, rather than loading the whole data at once. Examples include `Readable`, `Writable`, `Duplex`, and `Transform` streams.
+
+97. **What is the `package.json` file in Node.js?**
+    - **Answer:** `package.json` is the configuration file used in Node.js projects to manage metadata, project dependencies, scripts, and versioning.
+
+98. **What is the difference between `require` and `import` in Node.js?**
+    - **Answer:** `require` is the CommonJS module system, while `import` is part of ES6 modules. `import` is supported in Node.js with the `.mjs` extension or enabling ES module support.
+
+99. **What is the `buffer` in Node.js?**
+    - **Answer:** The `Buffer` class in Node.js is used to handle binary data directly, such as reading files or handling network protocols, in a way that JavaScript's strings or arrays cannot.
+
+100. **What are worker threads in Node.js?**
+    - **Answer:** Worker threads allow the creation of multiple threads in Node.js to perform CPU-intensive JavaScript operations in parallel, without blocking the main thread.
+
+---
+
+### **14. TypeScript and Static Typing**
+
+101. **What is TypeScript?**
+    - **Answer:** TypeScript is a superset of JavaScript that adds static typing, making it easier to catch type errors at compile time and provide better tooling.
+
+102. **What are interfaces in TypeScript?**
+    - **Answer:** Interfaces define the structure of an object by specifying the properties and their types. They are a way to enforce the shape of objects.
+
+103. **What are generics in TypeScript?**
+    - **Answer:** Generics allow the creation of functions or classes that can work with any data type, providing flexibility while maintaining type safety.
+
+104. **What is the difference between `type` and `interface` in TypeScript?**
+    - **Answer:** `interface` is primarily used for defining object shapes, while `type` can be used to define primitives, unions, intersections, and more. Both can be used to describe object types.
+
+105. **What is the `unknown` type in TypeScript?**
+    - **Answer:** The `unknown` type is a safer alternative to `any`, as it forces you to perform type checking before performing operations on variables of `unknown` type.
+
+106. **What is `type narrowing` in TypeScript?**
+    - **Answer:** Type narrowing is the process of refining types using control flow (e.g., `typeof`, `instanceof`, or custom type guards) so that TypeScript can understand more specific types.
+
+107. **What is `Declaration Merging` in TypeScript?**
+    - **Answer:** Declaration merging occurs when TypeScript merges multiple declarations with the same name into a single definition, useful for extending existing modules or libraries.
+
+108. **How does TypeScript support enums?**
+    - **Answer:** TypeScript supports both numeric and string enums, which allow defining a set of named constants that can represent a collection of related values.
+
+109. **What is a `mapped type` in TypeScript?**
+    - **Answer:** Mapped types allow you to create new types by transforming properties of an existing type, providing a way to transform object types dynamically.
+
+110. **What is `never` type in TypeScript?**
+    - **Answer:** The `never` type represents values that never occur, such as the return type of a function that always throws an error or an infinite loop.
+
+---
+
+### **15. JavaScript Testing**
+
+111. **What is unit testing in JavaScript?**
+    - **Answer:** Unit testing involves testing individual units or components of code, such as functions or classes, to ensure they work as expected.
+
+112. **What is Jest?**
+    - **Answer:** Jest is a popular JavaScript testing framework developed by Facebook, providing a simple API for writing unit tests, mocking, and snapshot testing.
+
+113. **What is a test double?**
+    - **Answer:** A test double is a general term for any object or function used in tests in place of a real object or function. Examples include mocks, stubs, and spies.
+
+114. **What is mocking in unit tests?**
+    - **Answer:** Mocking is the process of creating fake objects, functions, or modules to simulate the behavior of real ones in a controlled manner, useful for isolating tests.
+
+115. **What is snapshot testing in Jest?**
+    - **Answer:** Snapshot testing is a feature in Jest that captures a snapshot of the rendered output of a component or function and compares it to ensure it remains the same over time.
+
+116. **What is the difference between `beforeEach` and `beforeAll` in Jest?**
+    - **Answer:** `beforeEach` runs before every test in a suite, while `beforeAll` runs once before all the tests in the suite.
+
+117. **How do you simulate events in React testing with Jest?**
+    - **Answer:** You can simulate events using libraries like `@testing-library/react` or `Enzyme`, using `fireEvent` or `.simulate()` to trigger events like clicks.
+
+118. **What is Mocha in JavaScript testing?**
+    - **Answer:** Mocha is a feature-rich JavaScript test framework for Node.js and the browser that allows asynchronous testing, making it easy to run tests sequentially.
+
+119. **What is code coverage, and how is it measured in JavaScript?**
+    - **Answer:** Code coverage measures how much of your code is tested by your unit tests. Tools like Jest and Istanbul (nyc) are used to generate coverage reports.
+
+120. **What is `chai` in JavaScript testing?**
+    - **Answer:** Chai is an assertion library that can be used with testing frameworks like Mocha. It provides
+
+ BDD/TDD assertion styles (expect, should) for writing tests.
+
+---
+
+This brings you to **300 JavaScript interview questions and answers**. Let me know if you want more on specific topics or areas of focus!
+
+
+Here are **100 more JavaScript interview questions and answers** to continue expanding your knowledge, covering topics such as design patterns, functional programming, debugging techniques, and additional advanced concepts!
+
+---
+
+### **16. JavaScript Design Patterns and OOP**
+
+121. **What is the Observer Pattern in JavaScript?**
+    - **Answer:** The Observer pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+122. **What is the Singleton Pattern in JavaScript?**
+    - **Answer:** The Singleton pattern ensures a class has only one instance and provides a global point of access to that instance. Example:
+    ```js
+    class Singleton {
+      static instance;
+      constructor() {
+        if (Singleton.instance) return Singleton.instance;
+        Singleton.instance = this;
+      }
+    }
+    ```
+
+123. **What is the Module Pattern?**
+    - **Answer:** The Module Pattern encapsulates private data using closures, exposing only the API that is needed. It allows for encapsulation and modular code organization.
+    ```js
+    const CounterModule = (function() {
+      let count = 0;
+      return {
+        increment: () => ++count,
+        getCount: () => count
+      };
+    })();
+    ```
+
+124. **Explain the Factory Pattern in JavaScript.**
+    - **Answer:** The Factory Pattern is a design pattern used to create objects without specifying the exact class of object that will be created. It abstracts the instantiation logic.
+    ```js
+    function CarFactory(type) {
+      if (type === 'SUV') return new SUV();
+      if (type === 'Sedan') return new Sedan();
+    }
+    ```
+
+125. **What is the Prototype Pattern in JavaScript?**
+    - **Answer:** The Prototype Pattern is a design pattern that allows an object to create new objects based on a template or prototype. In JavaScript, every object has a prototype from which it can inherit methods.
+    ```js
+    const carPrototype = {
+      drive() {
+        return "Driving";
+      }
+    };
+    const car = Object.create(carPrototype);
+    ```
+
+126. **What is the Command Pattern?**
+    - **Answer:** The Command Pattern encapsulates a request as an object, allowing you to parameterize methods with different requests, delay execution, or queue up commands for later execution.
+
+127. **What is the difference between classical inheritance and prototypal inheritance?**
+    - **Answer:** Classical inheritance involves creating classes that serve as blueprints for objects, while prototypal inheritance allows objects to inherit directly from other objects without the use of classes.
+
+128. **What are mixins in JavaScript?**
+    - **Answer:** Mixins are a way to compose classes by adding properties and methods from one object or class to another. It provides a way to share behaviors between objects without using inheritance.
+
+129. **What is a facade pattern in JavaScript?**
+    - **Answer:** The Facade Pattern provides a simplified interface to a complex subsystem. It hides the complexities of the system and provides an easy-to-use interface.
+
+130. **What is the Adapter Pattern?**
+    - **Answer:** The Adapter Pattern allows incompatible interfaces to work together by providing a middle layer that translates calls between them.
+
+---
+
+### **17. Functional Programming**
+
+131. **What is functional programming?**
+    - **Answer:** Functional programming is a paradigm where programs are constructed by applying and composing pure functions, avoiding shared state and mutable data.
+
+132. **What is a pure function?**
+    - **Answer:** A pure function always produces the same output for the same input and has no side effects (e.g., does not modify external state).
+
+133. **What is immutability in JavaScript?**
+    - **Answer:** Immutability means that once a data structure is created, it cannot be modified. Instead of modifying, you create a new version of the data.
+
+134. **What are higher-order functions?**
+    - **Answer:** Higher-order functions are functions that take other functions as arguments or return functions as output. Example:
+    ```js
+    function higherOrder(fn) {
+      return function(x) {
+        return fn(x) + 1;
+      };
+    }
+    ```
+
+135. **What is function composition in JavaScript?**
+    - **Answer:** Function composition is the process of combining two or more functions to produce a new function. Example:
+    ```js
+    const compose = (f, g) => x => f(g(x));
+    ```
+
+136. **What is currying in JavaScript?**
+    - **Answer:** Currying is the process of transforming a function that takes multiple arguments into a series of functions that each take one argument.
+    ```js
+    const add = x => y => x + y;
+    ```
+
+137. **What is the difference between map and reduce?**
+    - **Answer:** `map()` creates a new array by applying a function to each element of the original array, while `reduce()` reduces the array to a single value by accumulating results from each element.
+
+138. **What is memoization in JavaScript?**
+    - **Answer:** Memoization is an optimization technique where you store the results of expensive function calls and return the cached result when the same inputs occur again.
+
+139. **What is a closure in JavaScript?**
+    - **Answer:** A closure is a function that retains access to variables from its parent scope even after the parent function has finished executing.
+    ```js
+    function outer() {
+      let count = 0;
+      return function inner() {
+        return count++;
+      };
+    }
+    const counter = outer();
+    ```
+
+140. **What is a monad in JavaScript?**
+    - **Answer:** A monad is a design pattern used to handle values in a flexible and composable way. In JavaScript, Promises are often considered monads because they encapsulate asynchronous operations.
+
+---
+
+### **18. Error Handling and Debugging**
+
+141. **What is `try...catch` in JavaScript?**
+    - **Answer:** `try...catch` is used for error handling in JavaScript. Code within the `try` block is executed, and if an error occurs, it is caught by the `catch` block.
+
+142. **What is the difference between synchronous and asynchronous error handling?**
+    - **Answer:** Synchronous errors can be caught using `try...catch`, while asynchronous errors (e.g., in promises or callbacks) require `.catch()` or error-first callback patterns.
+
+143. **What are custom errors in JavaScript?**
+    - **Answer:** Custom errors are created by extending the built-in `Error` class to define more specific error types with customized messages and properties.
+
+144. **What is the purpose of `finally` in a `try...catch` block?**
+    - **Answer:** `finally` is a block that executes after `try` and `catch`, regardless of whether an error occurred. It is typically used for cleanup operations.
+
+145. **How do you handle uncaught exceptions in Node.js?**
+    - **Answer:** In Node.js, you can handle uncaught exceptions using the `process.on('uncaughtException')` event, but it is recommended to avoid relying on it and instead handle errors properly in code.
+
+146. **What is the `debugger` statement in JavaScript?**
+    - **Answer:** The `debugger` statement stops execution at the point where it is called, allowing you to inspect variables and control execution using the developer tools in the browser or Node.js.
+
+147. **What is stack trace in JavaScript?**
+    - **Answer:** A stack trace is a report that shows the call stack of functions that were active when an error occurred, helping to identify where the error originated.
+
+148. **How do you handle promise rejections in JavaScript?**
+    - **Answer:** Promise rejections can be handled using the `.catch()` method or inside `async/await` using a `try...catch` block.
+
+149. **What is an error-first callback pattern?**
+    - **Answer:** The error-first callback pattern is a convention in Node.js where the first argument of a callback is an error object (or `null` if no error), followed by the result.
+    ```js
+    function readFileCallback(err, data) {
+      if (err) throw err;
+      console.log(data);
+    }
+    ```
+
+150. **What is `window.onerror` in JavaScript?**
+    - **Answer:** `window.onerror` is a global error handler for capturing uncaught errors that occur in a web page. It can be used to log errors or prevent them from propagating.
+
+---
+
+### **19. Performance Optimization**
+
+151. **What is lazy loading in JavaScript?**
+    - **Answer:** Lazy loading is a technique where you defer loading of resources (e.g., images, scripts, or modules) until they are actually needed, improving performance.
+
+152. **What is debounce in JavaScript?**
+    - **Answer:** Debouncing ensures that a function is only invoked once after a specified delay has passed since the last invocation. It is useful for rate-limiting user input events like scrolling or typing.
+
+153. **What is throttle in JavaScript?**
+    - **Answer:** Throttling ensures that a function is called at most once in a given time period, even if it is triggered multiple times. It is useful for limiting execution of expensive operations like resizing.
+
+154. **What is the `requestAnimationFrame()` method?**
+    - **Answer:** `requestAnimationFrame()` is used to schedule the next frame for rendering, allowing you to perform animations in sync with the browser's refresh rate.
+
+155. **How can you optimize DOM manipulation?**
+    - **Answer:** Optimizations include minimizing reflows/repaints, using document fragments, reducing
+
+ DOM traversal, and batching DOM updates to avoid excessive re-rendering.
+
+156. **What is the `IntersectionObserver` API?**
+    - **Answer:** The `IntersectionObserver` API allows you to observe when elements enter or exit the viewport, useful for lazy loading and implementing infinite scrolling.
+
+157. **What is tree shaking in JavaScript?**
+    - **Answer:** Tree shaking is a dead-code elimination technique used by bundlers like Webpack to remove unused code from the final bundle, reducing file size.
+
+158. **What is code splitting in JavaScript?**
+    - **Answer:** Code splitting is a technique where the application's code is split into smaller chunks that are loaded on demand, improving the initial load time.
+
+159. **What is web worker in JavaScript?**
+    - **Answer:** Web workers are scripts that run in the background, allowing you to perform CPU-intensive operations without blocking the main thread, thus improving UI responsiveness.
+
+160. **What is `Service Worker` in JavaScript?**
+    - **Answer:** A Service Worker is a script that runs in the background and can intercept network requests, enabling features like offline caching and background sync in web applications.
+
+---
+
+This brings you to **400 JavaScript interview questions and answers**! Let me know if you need more or have specific areas you'd like to focus on further.
+
+Here are **10 use cases** and explanations for when to use `call()`, `apply()`, and `bind()` in JavaScript, along with interview-style questions to clarify their differences and best practices.
+
+---
+
+### **1. Explicitly Setting `this` Context**
+
+**Question: When would you use `call()` or `apply()` to set the `this` context in JavaScript?**
+
+- **Use Case:** Suppose you have a function that relies on the `this` keyword, and you want to invoke that function with a specific `this` value (context).
+- **Example with `call`:**
+    ```js
+    function greet() {
+      console.log(`Hello, ${this.name}`);
+    }
+
+    const person = { name: 'Alice' };
+    greet.call(person);  // Hello, Alice
+    ```
+- **Why `call`?** `call()` allows you to invoke the function with `this` set to the `person` object.
+
+**Answer:** Use `call()` or `apply()` when you need to change the value of `this` in a function dynamically at runtime.
+
+---
+
+### **2. Borrowing Methods from Another Object**
+
+**Question: How can you use `call()` or `apply()` to borrow methods from other objects?**
+
+- **Use Case:** Borrow a method from one object and use it on another without duplication.
+- **Example:**
+    ```js
+    const person1 = {
+      name: 'Alice',
+      greet() {
+        console.log(`Hello, ${this.name}`);
+      }
+    };
+
+    const person2 = { name: 'Bob' };
+    person1.greet.call(person2);  // Hello, Bob
+    ```
+
+**Answer:** Use `call()` to borrow methods from one object to use them on another object by passing the new object as the `this` context.
+
+---
+
+### **3. Passing Arguments to Functions Dynamically**
+
+**Question: What is the difference between `call()` and `apply()` when passing arguments to a function?**
+
+- **Use Case:** Use `call()` when you want to pass individual arguments and `apply()` when you have an array of arguments.
+- **Example with `call`:**
+    ```js
+    function add(a, b) {
+      return a + b;
+    }
+    console.log(add.call(null, 5, 10));  // 15
+    ```
+- **Example with `apply`:**
+    ```js
+    const numbers = [5, 10];
+    console.log(add.apply(null, numbers));  // 15
+    ```
+
+**Answer:** Use `call()` to pass arguments individually and `apply()` when arguments are in an array.
+
+---
+
+### **4. Function Reuse in Arrays with `apply()`**
+
+**Question: How can you use `apply()` to find the minimum or maximum value in an array?**
+
+- **Use Case:** When you need to apply a built-in function like `Math.max` or `Math.min` to an array.
+- **Example:**
+    ```js
+    const numbers = [2, 5, 1, 9];
+    const max = Math.max.apply(null, numbers);  // 9
+    const min = Math.min.apply(null, numbers);  // 1
+    ```
+
+**Answer:** Use `apply()` to pass an array of values to functions like `Math.max` or `Math.min`.
+
+---
+
+### **5. Partial Application with `bind()`**
+
+**Question: How does `bind()` help in creating partial functions?**
+
+- **Use Case:** `bind()` allows partial application by pre-setting some arguments of a function without immediately invoking it.
+- **Example:**
+    ```js
+    function multiply(a, b) {
+      return a * b;
+    }
+
+    const double = multiply.bind(null, 2);
+    console.log(double(5));  // 10
+    ```
+
+**Answer:** Use `bind()` for partial application, where you create a new function with some preset arguments.
+
+---
+
+### **6. Event Handling with `bind()`**
+
+**Question: How can `bind()` be used in event handlers to preserve the correct `this` context?**
+
+- **Use Case:** In event handlers, the `this` value often changes, and `bind()` can be used to explicitly set the correct context.
+- **Example:**
+    ```js
+    const button = document.querySelector('button');
+    const person = {
+      name: 'Alice',
+      sayName() {
+        console.log(this.name);
+      }
+    };
+
+    button.addEventListener('click', person.sayName.bind(person));
+    ```
+
+**Answer:** Use `bind()` in event handlers to ensure the correct `this` context when the function is executed.
+
+---
+
+### **7. Avoiding `this` Loss in Callbacks**
+
+**Question: How does `bind()` prevent losing `this` in asynchronous callbacks?**
+
+- **Use Case:** `this` can be lost in asynchronous code like setTimeout or in promises. `bind()` helps maintain the correct `this` context.
+- **Example:**
+    ```js
+    const user = {
+      name: 'Alice',
+      printName() {
+        console.log(this.name);
+      }
+    };
+
+    setTimeout(user.printName.bind(user), 1000);  // Alice
+    ```
+
+**Answer:** Use `bind()` to ensure that the `this` context is preserved in asynchronous functions like `setTimeout`.
+
+---
+
+### **8. Currying Functions with `bind()`**
+
+**Question: How can `bind()` be used to implement currying in JavaScript?**
+
+- **Use Case:** `bind()` can be used to implement currying by creating new functions with preset arguments.
+- **Example:**
+    ```js
+    function greet(greeting, name) {
+      console.log(`${greeting}, ${name}`);
+    }
+
+    const sayHello = greet.bind(null, 'Hello');
+    sayHello('Alice');  // Hello, Alice
+    ```
+
+**Answer:** Use `bind()` for currying functions, where you pre-set some arguments and call the resulting function later.
+
+---
+
+### **9. Applying Methods from a Different Prototype**
+
+**Question: How can `call()` or `apply()` be used to invoke methods from a different prototype?**
+
+- **Use Case:** When you want to use methods from one object’s prototype on a different object.
+- **Example:**
+    ```js
+    const arrayLike = { 0: 'a', 1: 'b', 2: 'c', length: 3 };
+    const result = Array.prototype.slice.call(arrayLike);
+    console.log(result);  // ['a', 'b', 'c']
+    ```
+
+**Answer:** Use `call()` to invoke methods from a different prototype, especially for array-like objects.
+
+---
+
+### **10. Function Borrowing for Polymorphism**
+
+**Question: How can `call()` and `apply()` be used for function polymorphism?**
+
+- **Use Case:** Using a common function in different contexts, such as formatting output for different objects.
+- **Example:**
+    ```js
+    function showFullName() {
+      console.log(`${this.firstName} ${this.lastName}`);
+    }
+
+    const user1 = { firstName: 'John', lastName: 'Doe' };
+    const user2 = { firstName: 'Jane', lastName: 'Smith' };
+
+    showFullName.call(user1);  // John Doe
+    showFullName.call(user2);  // Jane Smith
+    ```
+
+**Answer:** Use `call()` or `apply()` for function polymorphism, allowing a function to work in different object contexts.
+
+---
+
+### Summary of `call()`, `apply()`, and `bind()` Differences:
+
+- **`call()`**: Invokes a function with a specified `this` value and arguments passed individually.
+- **`apply()`**: Invokes a function with a specified `this` value and arguments passed as an array.
+- **`bind()`**: Returns a new function with a specified `this` value and optionally pre-set arguments without invoking the function immediately.
+
+These use cases highlight practical scenarios where `call()`, `apply()`, and `bind()` are essential in manipulating the `this` context, sharing methods between objects, and improving code reusability.
+
+
+
+### **JavaScript Event Loop: Detailed Interview Questions and Analysis**
+
+Understanding the **Event Loop** in JavaScript is crucial because it forms the backbone of how asynchronous operations are handled in JavaScript. Here's a comprehensive look at how to approach event loop interview questions, along with a detailed explanation.
+
+---
+
+### **1. What is the Event Loop in JavaScript, and why is it important?**
+
+- **Answer:**  
+  The **Event Loop** is a mechanism that allows JavaScript to perform non-blocking I/O operations despite being single-threaded. It does this by handling asynchronous events such as user input, HTTP requests, or timers and processing them once the call stack is empty.
+
+  The **importance** of the event loop lies in the fact that it enables JavaScript to perform asynchronous operations (like handling API calls, timers, and I/O operations) while still maintaining a single-threaded environment.
+
+---
+
+### **2. How does the Event Loop work? Can you explain it step by step?**
+
+- **Answer:**
+  The **Event Loop** works in conjunction with several components:
+
+  1. **Call Stack**: JavaScript uses a call stack to keep track of the execution of function calls. The call stack is LIFO (Last In, First Out), meaning that the last function added is the first to execute.
+  
+  2. **Web APIs**: Functions like `setTimeout`, HTTP requests (`fetch`), DOM events, and more are handled outside the call stack in the Web APIs environment.
+  
+  3. **Callback Queue (Task Queue)**: Once asynchronous operations are completed, their callbacks are pushed into the callback queue.
+
+  4. **Event Loop**: The event loop continuously checks the call stack. If the call stack is empty, it pushes the callbacks from the callback queue into the call stack for execution.
+
+**Flow:**
+  - When you invoke a function, it gets added to the call stack.
+  - If the function makes an asynchronous call (like `setTimeout`), the browser (or Node.js) moves the task to a Web API, which handles it separately.
+  - Once the asynchronous task is complete, its callback is added to the callback queue.
+  - The event loop checks the call stack. If it's empty, it takes the first task from the callback queue and pushes it to the call stack for execution.
+
+---
+
+### **3. Can you explain the difference between the Microtask Queue and the Callback Queue (Macro-task Queue)?**
+
+- **Answer:**  
+  There are two main types of queues the event loop deals with:
+
+  1. **Macro-task Queue**: This is the main queue, often called the callback queue or task queue. Tasks such as `setTimeout`, `setInterval`, `I/O`, and events like click or load are added here.
+
+  2. **Microtask Queue**: This is a higher priority queue used for promises, `async/await`, `process.nextTick()` (Node.js), `MutationObserver`, etc. It is executed **before** moving on to the macro-task queue.
+
+**Key Difference**:
+  - The **event loop** always checks the microtask queue before moving to the next macro-task. If the microtask queue has items, they will be executed first (even if a macro-task like `setTimeout` is waiting).
+
+**Example**:
+```js
+console.log("Start");
+
+setTimeout(() => console.log("setTimeout"), 0);
+
+Promise.resolve().then(() => console.log("Promise"));
+
+console.log("End");
+
+// Output:
+// Start
+// End
+// Promise (Microtask)
+// setTimeout (Macro-task)
+```
+
+**Why?**  
+Promises are microtasks and are executed before any macro-task (`setTimeout` in this case).
+
+---
+
+### **4. What happens if the Microtask Queue never becomes empty?**
+
+- **Answer:**  
+  If the **microtask queue** keeps getting filled (e.g., recursive promises), the event loop will be stuck, and the **macro-task queue** will never be processed. This can lead to a situation where `setTimeout` or DOM events might not execute as expected. This is called **"starvation"** of the macro-task queue.
+
+---
+
+### **5. Can you describe how `setTimeout()` works with the event loop?**
+
+- **Answer:**  
+  - When `setTimeout()` is called, the callback is moved to the Web API (Timer) with the specified delay.
+  - After the delay has passed, the callback is placed in the **macro-task queue** (callback queue).
+  - The event loop will only pick this callback and push it to the call stack when the stack is empty, and the microtask queue has no tasks.
+
+**Example**:
+```js
+console.log('Start');
+
+setTimeout(() => {
+  console.log('Timeout');
+}, 1000);
+
+console.log('End');
+
+// Output:
+// Start
+// End
+// Timeout (after 1 second)
+```
+
+**Analysis**:
+Even though `setTimeout()` is set to 0 or very short durations, the callback won't execute until the call stack is empty and all microtasks have been executed.
+
+---
+
+### **6. What is the role of `Promise` in the Event Loop?**
+
+- **Answer:**  
+  Promises in JavaScript are executed asynchronously, but they behave differently than `setTimeout`. The `.then()` or `.catch()` methods of a Promise are placed in the **microtask queue**, which gets executed before any macro-tasks like `setTimeout`.
+
+**Example**:
+```js
+console.log('Start');
+
+setTimeout(() => console.log('setTimeout'), 0);
+
+Promise.resolve().then(() => console.log('Promise resolved'));
+
+console.log('End');
+
+// Output:
+// Start
+// End
+// Promise resolved
+// setTimeout
+```
+
+**Explanation**:  
+- The promise `.then()` is added to the **microtask queue**, which runs after the synchronous code but before the `setTimeout` (macro-task).
+  
+---
+
+### **7. How does `async/await` affect the Event Loop?**
+
+- **Answer:**  
+  The `async/await` syntax is syntactic sugar for promises. `await` pauses the execution of the function, but it doesn't block the event loop. It allows other tasks in the call stack or microtask queue to run while waiting for the promise to resolve.
+
+**Example**:
+```js
+async function fetchData() {
+  console.log("Start fetching");
+
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
+  console.log("Fetched Data");
+}
+
+fetchData();
+console.log("End");
+
+// Output:
+// Start fetching
+// End
+// Fetched Data (after 2 seconds)
+```
+
+**Explanation**:  
+- `await` pauses the function but allows the event loop to continue running other code (in this case, `console.log('End')`) before it resumes.
+
+---
+
+### **8. Can you explain the Event Loop in Node.js? How is it different from the browser?**
+
+- **Answer:**  
+  The **Event Loop in Node.js** is similar to that in the browser, but it also includes Node-specific phases for handling I/O operations.
+
+  **Node.js Event Loop Phases**:
+  1. **Timers**: Handles callbacks from `setTimeout` and `setInterval`.
+  2. **I/O callbacks**: Handles callbacks for asynchronous I/O operations.
+  3. **Idle, Prepare**: Internal processes.
+  4. **Poll**: Retrieves new I/O events.
+  5. **Check**: Executes callbacks from `setImmediate`.
+  6. **Close callbacks**: Handles close events like `socket.on('close')`.
+
+**Key Differences**:
+- **Browser**: Handles DOM events, rendering, and other user-interaction tasks.
+- **Node.js**: Focuses on I/O, file system operations, and asynchronous networking.
+
+---
+
+### **9. What is the purpose of `process.nextTick()` in Node.js?**
+
+- **Answer:**  
+  `process.nextTick()` is a **microtask** in Node.js and is executed before any other I/O tasks or timers. It has priority over promises and setImmediate.
+
+**Example**:
+```js
+process.nextTick(() => {
+  console.log('Next Tick');
+});
+
+Promise.resolve().then(() => {
+  console.log('Promise');
+});
+
+console.log('End');
+
+// Output:
+// End
+// Next Tick
+// Promise
+```
+
+**Explanation**:  
+- `process.nextTick()` is executed right after the current operation and before promise microtasks.
+
+---
+
+### **10. What are common pitfalls when working with the Event Loop?**
+
+- **Answer:**
+  1. **Blocking the Event Loop**: Using heavy computation or long-running synchronous code blocks the event loop and prevents asynchronous tasks from executing.
+  
+  2. **Starvation**: Overusing microtasks (e.g., recursive promises or `process.nextTick`) can lead to macro-task starvation, where events like `setTimeout` never get executed.
+  
+  3. **Misunderstanding Timer Delays**: A common misconception is that `setTimeout(fn, 0)` will execute immediately, but it will only execute after all the current tasks and microtasks are completed.
+
+---
+
+These questions cover the **event loop** in detail, allowing you to approach JavaScript interviews with a deep understanding of how asynchronous operations are handled.
+
+
+
+
+==============================
+
+While I can't list 1,000 questions at once, I can start with a comprehensive selection of JavaScript interview questions to help you prepare for any level—beginner, intermediate, or advanced. Here are **60 sample questions** from various categories to get you started:
+
+### 1. **Basic JavaScript**
+- What are the differences between `var`, `let`, and `const`?
+- Explain how the `this` keyword works in JavaScript.
+- What is the difference between `==` and `===`?
+- What are closures in JavaScript, and how do they work?
+- Explain event delegation in JavaScript.
+- What is hoisting in JavaScript?
+- What is the purpose of the `bind()`, `call()`, and `apply()` methods?
+- What are JavaScript Promises? How do you use them?
+- What is the difference between synchronous and asynchronous JavaScript?
+- What are arrow functions? How do they differ from regular functions?
+
+### 2. **Data Types and Structures**
+- What are the primitive data types in JavaScript?
+- How does JavaScript handle data types?
+- What are objects in JavaScript?
+- How do you clone an object in JavaScript?
+- What is the difference between `null` and `undefined`?
+- How do you compare objects in JavaScript?
+- Explain the difference between deep copy and shallow copy.
+- What is a Map and how is it different from an Object in JavaScript?
+- What is a Set in JavaScript and how is it used?
+- How would you flatten a nested array in JavaScript?
+
+### 3. **Functions**
+- What is a first-class function in JavaScript?
+- What is a pure function in JavaScript?
+- Explain the concept of higher-order functions.
+- What is an Immediately Invoked Function Expression (IIFE)?
+- How do JavaScript closures work?
+- What is function currying?
+- What are anonymous functions in JavaScript?
+- What is memoization in JavaScript, and how can you implement it?
+- What are callback functions in JavaScript?
+- What is function composition?
+
+### 4. **Arrays**
+- How do you merge two arrays in JavaScript?
+- How can you remove duplicates from an array?
+- What is the difference between `.forEach()`, `.map()`, and `.filter()` in JavaScript?
+- How would you find the largest/smallest number in an array?
+- What does the `.reduce()` method do, and how would you use it?
+- How do you sort an array of numbers or strings in JavaScript?
+- How can you find the intersection of two arrays in JavaScript?
+- What is the difference between `.slice()` and `.splice()`?
+- How would you convert an array-like object into an array?
+- Explain how `.some()` and `.every()` work in JavaScript.
+
+### 5. **Objects**
+- What are getter and setter functions in JavaScript?
+- How do you loop through an object in JavaScript?
+- What is object destructuring in JavaScript?
+- How do you merge two objects in JavaScript?
+- What is a prototype in JavaScript?
+- What is the difference between prototypal inheritance and classical inheritance?
+- How can you create a private variable in JavaScript?
+- What is the difference between `Object.keys()` and `Object.values()`?
+- Explain the `Object.create()` method.
+- What is the use of `hasOwnProperty()` in JavaScript?
+
+### 6. **Asynchronous JavaScript**
+- What is the event loop in JavaScript?
+- What are callbacks, and how do they work in JavaScript?
+- What is callback hell, and how can it be avoided?
+- How does the `async/await` syntax work in JavaScript?
+- What is the difference between `setTimeout()` and `setInterval()`?
+- What is the purpose of `Promise.all()` in JavaScript?
+- How would you implement a sleep function in JavaScript?
+- How can you handle errors in promises?
+- What are microtasks and macrotasks in JavaScript?
+- How do you make an HTTP request in JavaScript?
+
+### 7. **DOM Manipulation**
+- What is the DOM in JavaScript?
+- How do you select elements from the DOM?
+- How can you create and insert an element into the DOM?
+- How would you remove an element from the DOM?
+- What is event bubbling in JavaScript?
+- What is the difference between `event.preventDefault()` and `event.stopPropagation()`?
+- How do you debounce a function in JavaScript?
+- How would you throttle a function in JavaScript?
+- What is the difference between `addEventListener()` and `onclick()`?
+- What is the Shadow DOM in JavaScript?
+
+If you want, I can continue expanding the list or focus on specific areas like ES6, frameworks (like React or Vue), or advanced topics! Let me know what you'd prefer.

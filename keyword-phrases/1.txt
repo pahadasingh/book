@@ -1,0 +1,40 @@
+01| expressions using backticks
+02| sequence of functions
+03| to avoid redundant computation
+04| iterates over an array
+05| bubbling up or capturing down
+06| yield
+07| yield
+08| change your perspective
+09| Your emotions are the slaves to your thoughts, and you are the slave to your emotions
+10| ire of bureaucrats
+11| ridicule
+12| endure the ridicule of their peers
+13| morbidity
+14| epigenetic
+15| caloric restriction and intermittent fasting
+16| resveratrol and NAD+ boosters, which may promote longevity|
+17| due to some historical quirks
+18| intuitive
+19| profundities
+
+
+01 | ବ୍ୟାକଟିକ୍ସ ବ୍ୟବହାର କରି ଅଭିବ୍ୟକ୍ତି |
+02 | କାର୍ଯ୍ୟଗୁଡ଼ିକର କ୍ରମ |
+03 | ଅନାବଶ୍ୟକ ଗଣନାକୁ ଏଡାଇବାକୁ |
+04 | ଏକ ଆରେ ଉପରେ ପୁନରାବୃତ୍ତି କରେ |
+05 | ବବୁଲିଙ୍ଗ୍ କିମ୍ବା କ୍ୟାପଚର୍ କରିବା |
+06 | ଅମଳ
+07 | ଅମଳ
+08 | ତୁମର ଦୃଷ୍ଟିକୋଣ ପରିବର୍ତ୍ତନ କର |
+09 | ତୁମର ଭାବନା ତୁମର ଚିନ୍ତାଧାରାର ଦାସ, ଏବଂ ତୁମେ ତୁମର ଭାବନାର ଦାସ |
+10 | ଅମଲାତନ୍ତ୍ରର କ୍ରୋଧ |
+11 | ପରିହାସ
+12 | ସେମାନଙ୍କ ସାଥୀଙ୍କ ପରିହାସକୁ ସହ୍ୟ କରନ୍ତୁ |
+13 | | ଅସୁସ୍ଥତା
+14 | epigenetic
+15 | | କ୍ୟାଲୋରୀ ପ୍ରତିବନ୍ଧକ ଏବଂ ମଧ୍ୟବର୍ତ୍ତୀ ଉପବାସ |
+16 | resveratrol ଏବଂ NAD + ବୁଷ୍ଟର୍, ଯାହା ଦୀର୍ଘାୟୁକୁ ପ୍ରୋତ୍ସାହନ ଦେଇପାରେ |
+17 | | କିଛି historical ତିହାସିକ ପ୍ରଶ୍ନ ଯୋଗୁଁ |
+18 | ଅନ୍ତର୍ନିହିତ
+19 | ପ୍ରଚୁରତା

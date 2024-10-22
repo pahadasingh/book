@@ -1,0 +1,51 @@
+## PHP Tips
+
+### 1\. Writing More Flexible Functions Using Closure
+
+![None](https://miro.medium.com/v2/resize:fit:700/1*W1AU2a6P_cotb7S5HaYjQQ.png)
+
+Using Closure
+
+Closure is a feature in PHP that makes anonymous functions more powerful and flexible.
+
+Anonymous functions are functions that can be assigned to a variable, given as arguments to other functions, and defined dynamically. The Closure class scopes such anonymous functions.
+
+### 2\. Optimizing Memory Usage with Generators
+
+![None](https://miro.medium.com/v2/resize:fit:700/1*BoO5PClLnktj1FVpYLdruQ.png)
+
+Generators
+
+Generator functions are great for optimizing memory usage when working with large data sets. Such functions are programmed to generate data according to the need step by step, hence all the data.
+
+### 3\. Simplifying Complex Arrays with array_reduce
+
+![None](https://miro.medium.com/v2/resize:fit:700/1*vrM2rws-eWwxa7pTgry4zA.png)
+
+array_reduce
+
+array_reduce is addition, multiplication, etc. in an array in PHP coding language. It is a highly functional function used to reduce the array to a scalar value when performing operations.
+
+### 4\. Efficient Use of SPL (Standard PHP Library)
+
+![None](https://miro.medium.com/v2/resize:fit:700/1*lSoUTWqiHOWMdqokq3WSIA.png)
+
+Use of SPL
+
+SPL provides many useful classes and interfaces built into PHP. For example, SplFixedArray optimizes memory.
+
+### 5\. Using Intl (Internationalization Functions)
+
+![None](https://miro.medium.com/v2/resize:fit:700/1*Pm3AEDlbxUZIzfD_mR9Pew.png)
+
+Using Intl
+
+The intl extension is useful when developing multilingual applications. Especially classes such as NumberFormatter, MessageFormatter, and Locale are noteworthy.
+
+### 6\. Working with Large Files with Stream Functions
+
+![None](https://miro.medium.com/v2/resize:fit:700/1*MSzqfzdlJinxR9dQkAZ-CA.png)
+
+Stream Functions
+
+Stream functions such as fopen, fread, fwrite are important to use memory effectively when working with large files. fopen opens the file, fread reads it and fwrite lets editing file.

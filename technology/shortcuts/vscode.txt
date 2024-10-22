@@ -1,0 +1,13 @@
+(Alt + Shift + A)  | Comment with /**/
+(Ctrl + /) | Comment with //
+(Alt + Shift + 🔺🔻) | Duplicate Line
+(Alt + 🔺🔻)  | Move line
+(Alt + Ctrl + 🔺🔻) | 
+(Ctrl + SHift + /) | Collapse the function
+(Shift + ctrl + \)  | Jump to matching bracket
+(Ctrl + /)  |  Outdated Intent
+(Ctrl + L) | Select Line
+(Ctrl + X) | delete Line
+(Ctrl + .) | Quick Fix
+(Shift + F8) | Go to Error
+(Ctrl + Shift + V)  | MD preview

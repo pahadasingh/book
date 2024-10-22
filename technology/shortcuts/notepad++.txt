@@ -1,0 +1,3 @@
+Alt + Shift + Down-Arrow   -----> Multi Cursor for everyline
+Column Edit ----> in view for adding numbers
+Ctrl + D  ----> Duplicate line

@@ -1,0 +1,1035 @@
+.
+├── LICENSE.md
+├── Modules
+│   ├── Category
+│   │   ├── Config
+│   │   │   └── config.php
+│   │   ├── Console
+│   │   │   └── Commands
+│   │   │       └── CategoryCommand.php
+│   │   ├── Enums
+│   │   │   └── CategoryStatus.php
+│   │   ├── Http
+│   │   │   └── Controllers
+│   │   │       ├── Backend
+│   │   │       │   └── CategoriesController.php
+│   │   │       └── Frontend
+│   │   │           └── CategoriesController.php
+│   │   ├── Models
+│   │   │   └── Category.php
+│   │   ├── Providers
+│   │   │   ├── CategoryServiceProvider.php
+│   │   │   ├── EventServiceProvider.php
+│   │   │   └── RouteServiceProvider.php
+│   │   ├── Resources
+│   │   │   └── views
+│   │   │       ├── backend
+│   │   │       │   └── categories
+│   │   │       │       ├── create.blade.php
+│   │   │       │       ├── edit.blade.php
+│   │   │       │       ├── form.blade.php
+│   │   │       │       ├── index.blade.php
+│   │   │       │       ├── index_datatable.blade.php
+│   │   │       │       ├── show.blade.php
+│   │   │       │       └── trash.blade.php
+│   │   │       └── frontend
+│   │   │           └── categories
+│   │   │               ├── index.blade.php
+│   │   │               └── show.blade.php
+│   │   ├── composer.json
+│   │   ├── database
+│   │   │   ├── factories
+│   │   │   │   └── CategoryFactory.php
+│   │   │   ├── migrations
+│   │   │   │   └── 2024_04_06_031129_create_categories_table.php
+│   │   │   └── seeders
+│   │   │       └── CategoryDatabaseSeeder.php
+│   │   ├── lang
+│   │   │   └── en
+│   │   │       ├── categories.php
+│   │   │       └── text.php
+│   │   ├── module.json
+│   │   └── routes
+│   │       ├── api.php
+│   │       └── web.php
+│   ├── Post
+│   │   ├── Config
+│   │   │   └── config.php
+│   │   ├── Console
+│   │   │   └── Commands
+│   │   │       └── PostCommand.php
+│   │   ├── Enums
+│   │   │   ├── PostStatus.php
+│   │   │   └── PostType.php
+│   │   ├── Events
+│   │   │   ├── PostCreated.php
+│   │   │   ├── PostUpdated.php
+│   │   │   └── PostViewed.php
+│   │   ├── Http
+│   │   │   └── Controllers
+│   │   │       ├── Backend
+│   │   │       │   └── PostsController.php
+│   │   │       └── Frontend
+│   │   │           └── PostsController.php
+│   │   ├── Models
+│   │   │   ├── Post.php
+│   │   │   └── Presenters
+│   │   │       └── PostPresenter.php
+│   │   ├── Providers
+│   │   │   ├── EventServiceProvider.php
+│   │   │   ├── PostServiceProvider.php
+│   │   │   └── RouteServiceProvider.php
+│   │   ├── Resources
+│   │   │   └── views
+│   │   │       ├── backend
+│   │   │       │   └── posts
+│   │   │       │       ├── create.blade.php
+│   │   │       │       ├── edit.blade.php
+│   │   │       │       ├── form.blade.php
+│   │   │       │       ├── index.blade.php
+│   │   │       │       ├── index_datatable.blade.php
+│   │   │       │       ├── show.blade.php
+│   │   │       │       └── trash.blade.php
+│   │   │       └── frontend
+│   │   │           └── posts
+│   │   │               ├── index.blade.php
+│   │   │               └── show.blade.php
+│   │   ├── composer.json
+│   │   ├── database
+│   │   │   ├── factories
+│   │   │   │   └── PostFactory.php
+│   │   │   ├── migrations
+│   │   │   │   └── 2024_04_06_020035_create_posts_table.php
+│   │   │   └── seeders
+│   │   │       └── PostDatabaseSeeder.php
+│   │   ├── lang
+│   │   │   ├── bn
+│   │   │   │   └── posts.php
+│   │   │   └── en
+│   │   │       ├── posts.php
+│   │   │       └── text.php
+│   │   ├── module.json
+│   │   └── routes
+│   │       ├── api.php
+│   │       └── web.php
+│   └── Tag
+│       ├── Config
+│       │   └── config.php
+│       ├── Console
+│       │   └── Commands
+│       │       └── TagCommand.php
+│       ├── Enums
+│       │   └── TagStatus.php
+│       ├── Http
+│       │   └── Controllers
+│       │       ├── Backend
+│       │       │   └── TagsController.php
+│       │       └── Frontend
+│       │           └── TagsController.php
+│       ├── Models
+│       │   └── Tag.php
+│       ├── Providers
+│       │   ├── EventServiceProvider.php
+│       │   ├── RouteServiceProvider.php
+│       │   └── TagServiceProvider.php
+│       ├── Resources
+│       │   └── views
+│       │       ├── backend
+│       │       │   └── tags
+│       │       │       ├── create.blade.php
+│       │       │       ├── edit.blade.php
+│       │       │       ├── form.blade.php
+│       │       │       ├── index.blade.php
+│       │       │       ├── index_datatable.blade.php
+│       │       │       ├── show.blade.php
+│       │       │       └── trash.blade.php
+│       │       └── frontend
+│       │           └── tags
+│       │               ├── index.blade.php
+│       │               └── show.blade.php
+│       ├── composer.json
+│       ├── database
+│       │   ├── factories
+│       │   │   └── TagFactory.php
+│       │   ├── migrations
+│       │   │   ├── 2024_04_06_033820_create_tags_table.php
+│       │   │   └── 2024_04_06_154118_create_polymorphic_taggables_table.php
+│       │   └── seeders
+│       │       └── TagDatabaseSeeder.php
+│       ├── lang
+│       │   └── en
+│       │       └── text.php
+│       ├── module.json
+│       └── routes
+│           ├── api.php
+│           └── web.php
+├── README.md
+├── SECURITY.md
+├── app
+│   ├── Authorizable.php
+│   ├── Console
+│   │   └── Commands
+│   │       └── ResetDemo.php
+│   ├── Events
+│   │   ├── Auth
+│   │   │   └── UserLoginSuccess.php
+│   │   ├── Backend
+│   │   │   ├── UserCreated.php
+│   │   │   └── UserUpdated.php
+│   │   └── Frontend
+│   │       ├── UserRegistered.php
+│   │       └── UserUpdated.php
+│   ├── Http
+│   │   ├── Controllers
+│   │   │   ├── Auth
+│   │   │   │   ├── AuthenticatedSessionController.php
+│   │   │   │   ├── ConfirmablePasswordController.php
+│   │   │   │   ├── EmailVerificationNotificationController.php
+│   │   │   │   ├── EmailVerificationPromptController.php
+│   │   │   │   ├── NewPasswordController.php
+│   │   │   │   ├── PasswordController.php
+│   │   │   │   ├── PasswordResetLinkController.php
+│   │   │   │   ├── RegisteredUserController.php
+│   │   │   │   ├── SocialLoginController.php
+│   │   │   │   └── VerifyEmailController.php
+│   │   │   ├── Backend
+│   │   │   │   ├── BackendBaseController.php
+│   │   │   │   ├── BackendController.php
+│   │   │   │   ├── BackupController.php
+│   │   │   │   ├── NotificationsController.php
+│   │   │   │   ├── RolesController.php
+│   │   │   │   ├── SettingController.php
+│   │   │   │   └── UserController.php
+│   │   │   ├── Controller.php
+│   │   │   ├── Frontend
+│   │   │   │   ├── FrontendController.php
+│   │   │   │   └── UserController.php
+│   │   │   ├── LanguageController.php
+│   │   │   └── ProfileController.php
+│   │   ├── Middleware
+│   │   │   └── SetLocale.php
+│   │   └── Requests
+│   │       ├── Auth
+│   │       │   └── LoginRequest.php
+│   │       └── ProfileUpdateRequest.php
+│   ├── Listeners
+│   │   ├── Auth
+│   │   │   └── UpdateLoginData.php
+│   │   ├── Backend
+│   │   │   ├── UserCreated
+│   │   │   │   └── UserCreatedNotifySuperUser.php
+│   │   │   └── UserUpdated
+│   │   │       └── UserUpdatedNotifyUser.php
+│   │   └── Frontend
+│   │       ├── UserRegistered
+│   │       │   └── EmailNotificationOnUserRegistered.php
+│   │       └── UserUpdated
+│   │           ├── UserUpdatedNotifyUser.php
+│   │           └── UserUpdatedProfileUpdate.php
+│   ├── Livewire
+│   │   ├── Privacy.php
+│   │   ├── RecentPosts.php
+│   │   ├── Terms.php
+│   │   └── UsersIndex.php
+│   ├── Models
+│   │   ├── BaseModel.php
+│   │   ├── Notification.php
+│   │   ├── Permission.php
+│   │   ├── Presenters
+│   │   │   └── UserPresenter.php
+│   │   ├── Role.php
+│   │   ├── Setting.php
+│   │   ├── Traits
+│   │   │   └── HasHashedMediaTrait.php
+│   │   ├── User.php
+│   │   └── UserProvider.php
+│   ├── Notifications
+│   │   ├── NewRegistrationNotification.php
+│   │   ├── NewRegistrationNotificationForSocial.php
+│   │   ├── UserAccountCreated.php
+│   │   └── VerifyEmail.php
+│   ├── Providers
+│   │   └── AppServiceProvider.php
+│   ├── View
+│   │   └── Components
+│   │       ├── AppLayout.php
+│   │       └── GuestLayout.php
+│   └── helpers.php
+├── artisan
+├── bootstrap
+│   ├── app.php
+│   ├── cache
+│   └── providers.php
+├── composer.json
+├── composer.lock
+├── config
+│   ├── activitylog.php
+│   ├── app.php
+│   ├── auth.php
+│   ├── backup.php
+│   ├── cache.php
+│   ├── database.php
+│   ├── datatables.php
+│   ├── debugbar.php
+│   ├── filesystems.php
+│   ├── image.php
+│   ├── lfm.php
+│   ├── livewire.php
+│   ├── log-viewer.php
+│   ├── logging.php
+│   ├── mail.php
+│   ├── media-library.php
+│   ├── module-manager.php
+│   ├── permission.php
+│   ├── queue.php
+│   ├── services.php
+│   ├── session.php
+│   └── setting_fields.php
+├── database
+│   ├── factories
+│   │   └── UserFactory.php
+│   ├── migrations
+│   │   ├── 0001_01_01_000000_create_users_table.php
+│   │   ├── 0001_01_01_000001_create_cache_table.php
+│   │   ├── 0001_01_01_000002_create_jobs_table.php
+│   │   ├── 2024_03_22_233017_add_profile_columns_to_users_table.php
+│   │   ├── 2024_03_23_023114_create_permission_tables.php
+│   │   ├── 2024_03_23_025255_create_media_table.php
+│   │   ├── 2024_03_24_145514_create_settings_table.php
+│   │   ├── 2024_03_24_151236_create_notifications_table.php
+│   │   ├── 2024_03_24_195455_create_user_providers_table.php
+│   │   ├── 2024_03_26_013544_create_activity_log_table.php
+│   │   ├── 2024_03_26_013545_add_event_column_to_activity_log_table.php
+│   │   └── 2024_03_26_013546_add_batch_uuid_column_to_activity_log_table.php
+│   └── seeders
+│       ├── Auth
+│       │   ├── PermissionRoleTableSeeder.php
+│       │   ├── UserRoleTableSeeder.php
+│       │   └── UserTableSeeder.php
+│       ├── AuthTableSeeder.php
+│       └── DatabaseSeeder.php
+├── docker-compose.yml
+├── lang
+│   ├── bn.json
+│   ├── en
+│   │   ├── auth.php
+│   │   ├── labels.php
+│   │   ├── pagination.php
+│   │   ├── passwords.php
+│   │   └── validation.php
+│   ├── en.json
+│   ├── fa
+│   │   ├── auth.php
+│   │   ├── labels.php
+│   │   ├── pagination.php
+│   │   ├── passwords.php
+│   │   └── validation.php
+│   ├── hi.json
+│   ├── vendor
+│   │   ├── backup
+│   │   │   ├── ar
+│   │   │   │   └── notifications.php
+│   │   │   ├── bg
+│   │   │   │   └── notifications.php
+│   │   │   ├── bn
+│   │   │   │   └── notifications.php
+│   │   │   ├── cs
+│   │   │   │   └── notifications.php
+│   │   │   ├── da
+│   │   │   │   └── notifications.php
+│   │   │   ├── de
+│   │   │   │   └── notifications.php
+│   │   │   ├── en
+│   │   │   │   └── notifications.php
+│   │   │   ├── es
+│   │   │   │   └── notifications.php
+│   │   │   ├── fa
+│   │   │   │   └── notifications.php
+│   │   │   ├── fi
+│   │   │   │   └── notifications.php
+│   │   │   ├── fr
+│   │   │   │   └── notifications.php
+│   │   │   ├── he
+│   │   │   │   └── notifications.php
+│   │   │   ├── hi
+│   │   │   │   └── notifications.php
+│   │   │   ├── hr
+│   │   │   │   └── notifications.php
+│   │   │   ├── id
+│   │   │   │   └── notifications.php
+│   │   │   ├── it
+│   │   │   │   └── notifications.php
+│   │   │   ├── ja
+│   │   │   │   └── notifications.php
+│   │   │   ├── ko
+│   │   │   │   └── notifications.php
+│   │   │   ├── nl
+│   │   │   │   └── notifications.php
+│   │   │   ├── no
+│   │   │   │   └── notifications.php
+│   │   │   ├── pl
+│   │   │   │   └── notifications.php
+│   │   │   ├── pt
+│   │   │   │   └── notifications.php
+│   │   │   ├── pt-BR
+│   │   │   │   └── notifications.php
+│   │   │   ├── ro
+│   │   │   │   └── notifications.php
+│   │   │   ├── ru
+│   │   │   │   └── notifications.php
+│   │   │   ├── tr
+│   │   │   │   └── notifications.php
+│   │   │   ├── uk
+│   │   │   │   └── notifications.php
+│   │   │   ├── zh-CN
+│   │   │   │   └── notifications.php
+│   │   │   └── zh-TW
+│   │   │       └── notifications.php
+│   │   └── log-viewer
+│   │       ├── ar.json
+│   │       ├── bg.json
+│   │       ├── bn.json
+│   │       ├── de.json
+│   │       ├── es.json
+│   │       ├── et.json
+│   │       ├── fa.json
+│   │       ├── fr.json
+│   │       ├── he.json
+│   │       ├── hu.json
+│   │       ├── hy.json
+│   │       ├── id.json
+│   │       ├── it.json
+│   │       ├── ja.json
+│   │       ├── ko.json
+│   │       ├── ms.json
+│   │       ├── nl.json
+│   │       ├── pl.json
+│   │       ├── pt-BR.json
+│   │       ├── ro.json
+│   │       ├── ru.json
+│   │       ├── si.json
+│   │       ├── sv.json
+│   │       ├── th.json
+│   │       ├── tr.json
+│   │       ├── uk.json
+│   │       ├── uz.json
+│   │       ├── zh-TW.json
+│   │       └── zh.json
+│   ├── vi
+│   │   ├── auth.php
+│   │   ├── labels.php
+│   │   ├── pagination.php
+│   │   ├── passwords.php
+│   │   └── validation.php
+│   └── vi.json
+├── modules_statuses.json
+├── package.json
+├── phpunit.xml
+├── postcss.config.js
+├── public
+│   ├── build
+│   │   ├── assets
+│   │   │   ├── app-backend-Bm_BK1wQ.js
+│   │   │   ├── app-backend-oLx_0Cqr.css
+│   │   │   ├── app-frontend-BwoEp9fS.css
+│   │   │   ├── app-frontend-D6wa9n6Z.js
+│   │   │   ├── fa-brands-400-Dur5g48u.ttf
+│   │   │   ├── fa-brands-400-O7nZalfM.woff2
+│   │   │   ├── fa-regular-400-Bf3rG5Nx.ttf
+│   │   │   ├── fa-regular-400-DgEfZSYE.woff2
+│   │   │   ├── fa-solid-900-BV3CbEM2.ttf
+│   │   │   ├── fa-solid-900-DOQJEhcS.woff2
+│   │   │   ├── fa-v4compatibility-B9MWI-E6.ttf
+│   │   │   ├── fa-v4compatibility-BX8XWJtE.woff2
+│   │   │   └── popper-BAn7w8_p.js
+│   │   └── manifest.json
+│   ├── favicon.ico
+│   ├── humans.txt
+│   ├── img
+│   │   ├── 1000px-blue-cube-logo.jpg
+│   │   ├── avatars
+│   │   │   ├── 1.jpg
+│   │   │   ├── 2.jpg
+│   │   │   ├── 3.jpg
+│   │   │   ├── 4.jpg
+│   │   │   ├── 5.jpg
+│   │   │   ├── 6.jpg
+│   │   │   ├── 7.jpg
+│   │   │   ├── 8.jpg
+│   │   │   └── default-avatar.jpg
+│   │   ├── default-avatar.jpg
+│   │   ├── default_banner.jpg
+│   │   ├── favicon.png
+│   │   ├── logo-square.jpg
+│   │   ├── logo-with-text-dark.png
+│   │   ├── logo-with-text.jpg
+│   │   ├── logo-with-text.svg
+│   │   ├── logo.jpg
+│   │   └── logo.png
+│   ├── index.php
+│   ├── js
+│   │   └── jquery.min.js
+│   ├── robots.txt
+│   └── vendor
+│       ├── datatable
+│       │   ├── datatables.css
+│       │   ├── datatables.js
+│       │   ├── datatables.min.css
+│       │   └── datatables.min.js
+│       ├── iziToast
+│       │   ├── css
+│       │   │   ├── iziToast.css
+│       │   │   └── iziToast.min.css
+│       │   └── js
+│       │       ├── iziToast.js
+│       │       └── iziToast.min.js
+│       ├── jquery
+│       │   └── jquery-3.6.4.min.js
+│       ├── laravel-filemanager
+│       │   ├── css
+│       │   │   ├── cropper.min.css
+│       │   │   ├── dropzone.min.css
+│       │   │   ├── lfm.css
+│       │   │   └── mime-icons.min.css
+│       │   ├── files
+│       │   │   ├── adobe.pdf
+│       │   │   ├── folder-1
+│       │   │   │   └── sleeping-dog.jpg
+│       │   │   └── word.docx
+│       │   ├── images
+│       │   │   └── test-folder
+│       │   │       ├── sleeping-dog.jpg
+│       │   │       └── thumbs
+│       │   │           └── sleeping-dog.jpg
+│       │   ├── img
+│       │   │   ├── 152px color.png
+│       │   │   ├── 72px color.png
+│       │   │   ├── 92px color.png
+│       │   │   ├── Logomark color.png
+│       │   │   ├── folder.png
+│       │   │   └── loader.svg
+│       │   └── js
+│       │       ├── cropper.min.js
+│       │       ├── dropzone.min.js
+│       │       ├── filemanager.js
+│       │       ├── filemanager.min.js
+│       │       ├── script.js
+│       │       └── stand-alone-button.js
+│       ├── lightbox2
+│       │   ├── css
+│       │   │   ├── lightbox.css
+│       │   │   └── lightbox.min.css
+│       │   ├── images
+│       │   │   ├── close.png
+│       │   │   ├── loading.gif
+│       │   │   ├── next.png
+│       │   │   └── prev.png
+│       │   └── js
+│       │       ├── lightbox-plus-jquery.js
+│       │       ├── lightbox-plus-jquery.min.js
+│       │       ├── lightbox-plus-jquery.min.map
+│       │       ├── lightbox.js
+│       │       ├── lightbox.min.js
+│       │       └── lightbox.min.map
+│       ├── select2
+│       │   └── select2-coreui-bootstrap4.min.css
+│       └── selectize
+│           ├── css
+│           │   ├── selectize.bootstrap2.css
+│           │   ├── selectize.bootstrap3.css
+│           │   ├── selectize.bootstrap4.css
+│           │   ├── selectize.bootstrap5.css
+│           │   ├── selectize.css
+│           │   ├── selectize.default.css
+│           │   └── selectize.legacy.css
+│           ├── js
+│           │   ├── selectize.js
+│           │   ├── selectize.min.js
+│           │   └── standalone
+│           │       ├── selectize.js
+│           │       └── selectize.min.js
+│           ├── less
+│           │   ├── plugins
+│           │   │   ├── drag_drop.less
+│           │   │   ├── dropdown_header.less
+│           │   │   ├── optgroup_columns.less
+│           │   │   └── remove_button.less
+│           │   ├── selectize.bootstrap2.less
+│           │   ├── selectize.bootstrap3.less
+│           │   ├── selectize.default.less
+│           │   ├── selectize.legacy.less
+│           │   └── selectize.less
+│           ├── scss
+│           │   ├── plugins
+│           │   │   ├── drag_drop.scss
+│           │   │   ├── dropdown_header.scss
+│           │   │   ├── optgroup_columns.scss
+│           │   │   └── remove_button.scss
+│           │   ├── selectize.bootstrap3.scss
+│           │   ├── selectize.bootstrap4.scss
+│           │   ├── selectize.bootstrap5.scss
+│           │   ├── selectize.default.scss
+│           │   └── selectize.scss
+│           └── vendor
+│               ├── bootstrap4
+│               │   ├── _alert.scss
+│               │   ├── _badge.scss
+│               │   ├── _breadcrumb.scss
+│               │   ├── _button-group.scss
+│               │   ├── _buttons.scss
+│               │   ├── _card.scss
+│               │   ├── _carousel.scss
+│               │   ├── _close.scss
+│               │   ├── _code.scss
+│               │   ├── _custom-forms.scss
+│               │   ├── _dropdown.scss
+│               │   ├── _forms.scss
+│               │   ├── _functions.scss
+│               │   ├── _grid.scss
+│               │   ├── _images.scss
+│               │   ├── _input-group.scss
+│               │   ├── _jumbotron.scss
+│               │   ├── _list-group.scss
+│               │   ├── _media.scss
+│               │   ├── _mixins.scss
+│               │   ├── _modal.scss
+│               │   ├── _nav.scss
+│               │   ├── _navbar.scss
+│               │   ├── _pagination.scss
+│               │   ├── _popover.scss
+│               │   ├── _print.scss
+│               │   ├── _progress.scss
+│               │   ├── _reboot.scss
+│               │   ├── _root.scss
+│               │   ├── _spinners.scss
+│               │   ├── _tables.scss
+│               │   ├── _toasts.scss
+│               │   ├── _tooltip.scss
+│               │   ├── _transitions.scss
+│               │   ├── _type.scss
+│               │   ├── _utilities.scss
+│               │   ├── _variables.scss
+│               │   ├── bootstrap-grid.scss
+│               │   ├── bootstrap-reboot.scss
+│               │   ├── bootstrap.scss
+│               │   ├── mixins
+│               │   │   ├── _alert.scss
+│               │   │   ├── _background-variant.scss
+│               │   │   ├── _badge.scss
+│               │   │   ├── _border-radius.scss
+│               │   │   ├── _box-shadow.scss
+│               │   │   ├── _breakpoints.scss
+│               │   │   ├── _buttons.scss
+│               │   │   ├── _caret.scss
+│               │   │   ├── _clearfix.scss
+│               │   │   ├── _deprecate.scss
+│               │   │   ├── _float.scss
+│               │   │   ├── _forms.scss
+│               │   │   ├── _gradients.scss
+│               │   │   ├── _grid-framework.scss
+│               │   │   ├── _grid.scss
+│               │   │   ├── _hover.scss
+│               │   │   ├── _image.scss
+│               │   │   ├── _list-group.scss
+│               │   │   ├── _lists.scss
+│               │   │   ├── _nav-divider.scss
+│               │   │   ├── _pagination.scss
+│               │   │   ├── _reset-text.scss
+│               │   │   ├── _resize.scss
+│               │   │   ├── _screen-reader.scss
+│               │   │   ├── _size.scss
+│               │   │   ├── _table-row.scss
+│               │   │   ├── _text-emphasis.scss
+│               │   │   ├── _text-hide.scss
+│               │   │   ├── _text-truncate.scss
+│               │   │   ├── _transition.scss
+│               │   │   └── _visibility.scss
+│               │   ├── utilities
+│               │   │   ├── _align.scss
+│               │   │   ├── _background.scss
+│               │   │   ├── _borders.scss
+│               │   │   ├── _clearfix.scss
+│               │   │   ├── _display.scss
+│               │   │   ├── _embed.scss
+│               │   │   ├── _flex.scss
+│               │   │   ├── _float.scss
+│               │   │   ├── _interactions.scss
+│               │   │   ├── _overflow.scss
+│               │   │   ├── _position.scss
+│               │   │   ├── _screenreaders.scss
+│               │   │   ├── _shadows.scss
+│               │   │   ├── _sizing.scss
+│               │   │   ├── _spacing.scss
+│               │   │   ├── _stretched-link.scss
+│               │   │   ├── _text.scss
+│               │   │   └── _visibility.scss
+│               │   └── vendor
+│               │       └── _rfs.scss
+│               └── bootstrap5
+│                   ├── _accordion.scss
+│                   ├── _alert.scss
+│                   ├── _badge.scss
+│                   ├── _breadcrumb.scss
+│                   ├── _button-group.scss
+│                   ├── _buttons.scss
+│                   ├── _card.scss
+│                   ├── _carousel.scss
+│                   ├── _close.scss
+│                   ├── _containers.scss
+│                   ├── _dropdown.scss
+│                   ├── _forms.scss
+│                   ├── _functions.scss
+│                   ├── _grid.scss
+│                   ├── _helpers.scss
+│                   ├── _images.scss
+│                   ├── _list-group.scss
+│                   ├── _mixins.scss
+│                   ├── _modal.scss
+│                   ├── _nav.scss
+│                   ├── _navbar.scss
+│                   ├── _offcanvas.scss
+│                   ├── _pagination.scss
+│                   ├── _placeholders.scss
+│                   ├── _popover.scss
+│                   ├── _progress.scss
+│                   ├── _reboot.scss
+│                   ├── _root.scss
+│                   ├── _spinners.scss
+│                   ├── _tables.scss
+│                   ├── _toasts.scss
+│                   ├── _tooltip.scss
+│                   ├── _transitions.scss
+│                   ├── _type.scss
+│                   ├── _utilities.scss
+│                   ├── _variables.scss
+│                   ├── bootstrap-grid.scss
+│                   ├── bootstrap-reboot.scss
+│                   ├── bootstrap-utilities.scss
+│                   ├── bootstrap.scss
+│                   ├── forms
+│                   │   ├── _floating-labels.scss
+│                   │   ├── _form-check.scss
+│                   │   ├── _form-control.scss
+│                   │   ├── _form-range.scss
+│                   │   ├── _form-select.scss
+│                   │   ├── _form-text.scss
+│                   │   ├── _input-group.scss
+│                   │   ├── _labels.scss
+│                   │   └── _validation.scss
+│                   ├── helpers
+│                   │   ├── _clearfix.scss
+│                   │   ├── _colored-links.scss
+│                   │   ├── _position.scss
+│                   │   ├── _ratio.scss
+│                   │   ├── _stacks.scss
+│                   │   ├── _stretched-link.scss
+│                   │   ├── _text-truncation.scss
+│                   │   ├── _visually-hidden.scss
+│                   │   └── _vr.scss
+│                   ├── mixins
+│                   │   ├── _alert.scss
+│                   │   ├── _backdrop.scss
+│                   │   ├── _border-radius.scss
+│                   │   ├── _box-shadow.scss
+│                   │   ├── _breakpoints.scss
+│                   │   ├── _buttons.scss
+│                   │   ├── _caret.scss
+│                   │   ├── _clearfix.scss
+│                   │   ├── _color-scheme.scss
+│                   │   ├── _container.scss
+│                   │   ├── _deprecate.scss
+│                   │   ├── _forms.scss
+│                   │   ├── _gradients.scss
+│                   │   ├── _grid.scss
+│                   │   ├── _image.scss
+│                   │   ├── _list-group.scss
+│                   │   ├── _lists.scss
+│                   │   ├── _pagination.scss
+│                   │   ├── _reset-text.scss
+│                   │   ├── _resize.scss
+│                   │   ├── _table-variants.scss
+│                   │   ├── _text-truncate.scss
+│                   │   ├── _transition.scss
+│                   │   ├── _utilities.scss
+│                   │   └── _visually-hidden.scss
+│                   ├── utilities
+│                   │   └── _api.scss
+│                   └── vendor
+│                       └── _rfs.scss
+├── resources
+│   ├── css
+│   │   ├── app-frontend.css
+│   │   └── app.css
+│   ├── js
+│   │   ├── app-backend.js
+│   │   ├── app-frontend.js
+│   │   ├── app.js
+│   │   ├── backend-custom.js
+│   │   ├── bootstrap.js
+│   │   └── laravel.js
+│   ├── sass
+│   │   ├── _backend_custom.scss
+│   │   ├── _backend_variables.scss
+│   │   └── app-backend.scss
+│   ├── vendors
+│   │   └── coreui
+│   │       ├── CHANGELOG.md
+│   │       ├── LICENSE
+│   │       ├── README.md
+│   │       ├── nodemon.json
+│   │       ├── package-lock.json
+│   │       ├── package.json
+│   │       └── src
+│   │           ├── js
+│   │           │   ├── charts.js
+│   │           │   ├── color-modes.js
+│   │           │   ├── colors.js
+│   │           │   ├── config.js
+│   │           │   ├── main.js
+│   │           │   ├── popovers.js
+│   │           │   ├── toasts.js
+│   │           │   ├── tooltips.js
+│   │           │   └── widgets.js
+│   │           └── scss
+│   │               ├── _custom.scss
+│   │               ├── _theme.scss
+│   │               ├── _variables.scss
+│   │               ├── ads.scss
+│   │               ├── examples.scss
+│   │               ├── style.scss
+│   │               └── vendors
+│   │                   └── simplebar.scss
+│   └── views
+│       ├── auth
+│       │   ├── confirm-password.blade.php
+│       │   ├── forgot-password.blade.php
+│       │   ├── login.blade.php
+│       │   ├── register.blade.php
+│       │   ├── reset-password.blade.php
+│       │   └── verify-email.blade.php
+│       ├── backend
+│       │   ├── backups
+│       │   │   └── backups.blade.php
+│       │   ├── includes
+│       │   │   ├── action_column.blade.php
+│       │   │   ├── activitylog.blade.php
+│       │   │   ├── dashboard_demo_data.blade.php
+│       │   │   ├── errors.blade.php
+│       │   │   ├── header.blade.php
+│       │   │   ├── show.blade.php
+│       │   │   ├── sidebar.blade.php
+│       │   │   ├── user_actions.blade.php
+│       │   │   └── user_roles.blade.php
+│       │   ├── index.blade.php
+│       │   ├── layouts
+│       │   │   ├── app-copy.blade.php
+│       │   │   └── app.blade.php
+│       │   ├── notifications
+│       │   │   ├── index.blade.php
+│       │   │   └── show.blade.php
+│       │   ├── roles
+│       │   │   ├── create.blade.php
+│       │   │   ├── edit.blade.php
+│       │   │   ├── index.blade.php
+│       │   │   └── show.blade.php
+│       │   ├── settings
+│       │   │   ├── fields
+│       │   │   │   ├── checkbox.blade.php
+│       │   │   │   ├── email.blade.php
+│       │   │   │   ├── number.blade.php
+│       │   │   │   ├── select.blade.php
+│       │   │   │   ├── text.blade.php
+│       │   │   │   └── textarea.blade.php
+│       │   │   └── index.blade.php
+│       │   └── users
+│       │       ├── changePassword.blade.php
+│       │       ├── create.blade.php
+│       │       ├── edit.blade.php
+│       │       ├── index.blade.php
+│       │       ├── index_datatable.blade.php
+│       │       ├── show.blade.php
+│       │       └── trash.blade.php
+│       ├── components
+│       │   ├── application-logo.blade.php
+│       │   ├── auth-session-status.blade.php
+│       │   ├── auth-social-login.blade.php
+│       │   ├── backend
+│       │   │   ├── breadcrumb-item.blade.php
+│       │   │   ├── breadcrumbs.blade.php
+│       │   │   ├── buttons
+│       │   │   │   ├── cancel.blade.php
+│       │   │   │   ├── create.blade.php
+│       │   │   │   ├── edit.blade.php
+│       │   │   │   ├── return-back.blade.php
+│       │   │   │   ├── save.blade.php
+│       │   │   │   └── show.blade.php
+│       │   │   ├── includes
+│       │   │   │   ├── dashboard-demo.blade.php
+│       │   │   │   ├── footer.blade.php
+│       │   │   │   ├── header.blade.php
+│       │   │   │   ├── menu-language.blade.php
+│       │   │   │   ├── menu-user.blade.php
+│       │   │   │   └── sidebar.blade.php
+│       │   │   ├── layouts
+│       │   │   │   ├── create.blade.php
+│       │   │   │   ├── edit.blade.php
+│       │   │   │   ├── show.blade.php
+│       │   │   │   └── trash.blade.php
+│       │   │   ├── page-wrapper.blade.php
+│       │   │   ├── section-footer.blade.php
+│       │   │   ├── section-header.blade.php
+│       │   │   ├── section-show-table.blade.php
+│       │   │   └── sidebar-nav-item.blade.php
+│       │   ├── button-a.blade.php
+│       │   ├── button.blade.php
+│       │   ├── buttons
+│       │   │   ├── cancel.blade.php
+│       │   │   ├── create.blade.php
+│       │   │   ├── edit.blade.php
+│       │   │   ├── return-back.blade.php
+│       │   │   └── show.blade.php
+│       │   ├── danger-button.blade.php
+│       │   ├── dropdown-link.blade.php
+│       │   ├── dropdown.blade.php
+│       │   ├── frontend
+│       │   │   ├── badge.blade.php
+│       │   │   ├── card.blade.php
+│       │   │   ├── flash-message.blade.php
+│       │   │   ├── footer-credit.blade.php
+│       │   │   ├── footer-license.blade.php
+│       │   │   ├── header-block.blade.php
+│       │   │   ├── nav-item.blade.php
+│       │   │   └── social
+│       │   │       ├── all-social-url.blade.php
+│       │   │       ├── facebook_url.blade.php
+│       │   │       ├── instagram_url.blade.php
+│       │   │       ├── twitter_url.blade.php
+│       │   │       ├── website_url.blade.php
+│       │   │       ├── whatsapp_url.blade.php
+│       │   │       └── youtube_url.blade.php
+│       │   ├── google-analytics.blade.php
+│       │   ├── input-error.blade.php
+│       │   ├── input-label.blade.php
+│       │   ├── layouts
+│       │   │   └── app.blade.php
+│       │   ├── library
+│       │   │   ├── lightbox.blade.php
+│       │   │   └── select2.blade.php
+│       │   ├── modal.blade.php
+│       │   ├── nav-link.blade.php
+│       │   ├── primary-button.blade.php
+│       │   ├── responsive-nav-link.blade.php
+│       │   ├── secondary-button.blade.php
+│       │   ├── selected-theme.blade.php
+│       │   └── text-input.blade.php
+│       ├── frontend
+│       │   ├── includes
+│       │   │   ├── errors.blade.php
+│       │   │   ├── footer.blade.php
+│       │   │   ├── header.blade.php
+│       │   │   ├── messages.blade.php
+│       │   │   └── meta.blade.php
+│       │   ├── index.blade.php
+│       │   ├── layouts
+│       │   │   └── app.blade.php
+│       │   └── users
+│       │       ├── changePassword.blade.php
+│       │       ├── profile.blade.php
+│       │       └── profileEdit.blade.php
+│       ├── layouts
+│       │   ├── app.blade.php
+│       │   ├── guest.blade.php
+│       │   └── navigation.blade.php
+│       ├── livewire
+│       │   ├── privacy.blade.php
+│       │   ├── recent-posts.blade.php
+│       │   ├── terms.blade.php
+│       │   └── users-index.blade.php
+│       ├── profile
+│       │   ├── edit.blade.php
+│       │   └── partials
+│       │       ├── delete-user-form.blade.php
+│       │       ├── update-password-form.blade.php
+│       │       └── update-profile-information-form.blade.php
+│       └── vendor
+│           ├── flash
+│           │   ├── message.blade.php
+│           │   └── modal.blade.php
+│           ├── log-viewer
+│           │   ├── bootstrap-3
+│           │   │   ├── _master.blade.php
+│           │   │   ├── dashboard.blade.php
+│           │   │   ├── logs.blade.php
+│           │   │   └── show.blade.php
+│           │   ├── bootstrap-4
+│           │   │   ├── _master.blade.php
+│           │   │   ├── dashboard.blade.php
+│           │   │   ├── logs.blade.php
+│           │   │   └── show.blade.php
+│           │   ├── bootstrap-5
+│           │   │   ├── _master.blade.php
+│           │   │   ├── dashboard.blade.php
+│           │   │   ├── logs.blade.php
+│           │   │   └── show.blade.php
+│           │   └── laravel-starter
+│           │       ├── _master.blade.php
+│           │       ├── dashboard.blade.php
+│           │       ├── logs.blade.php
+│           │       ├── show.blade.php
+│           │       └── style.blade.php
+│           └── mail
+│               ├── html
+│               │   ├── button.blade.php
+│               │   ├── footer.blade.php
+│               │   ├── header.blade.php
+│               │   ├── layout.blade.php
+│               │   ├── message.blade.php
+│               │   ├── panel.blade.php
+│               │   ├── subcopy.blade.php
+│               │   ├── table.blade.php
+│               │   └── themes
+│               │       └── default.css
+│               └── text
+│                   ├── button.blade.php
+│                   ├── footer.blade.php
+│                   ├── header.blade.php
+│                   ├── layout.blade.php
+│                   ├── message.blade.php
+│                   ├── panel.blade.php
+│                   ├── subcopy.blade.php
+│                   └── table.blade.php
+├── routes
+│   ├── auth.php
+│   ├── console.php
+│   └── web.php
+├── sraban.txt
+├── storage
+│   ├── app
+│   │   └── public
+│   ├── debugbar
+│   ├── framework
+│   │   ├── cache
+│   │   │   └── data
+│   │   ├── sessions
+│   │   ├── testing
+│   │   └── views
+│   └── logs
+├── tailwind.config.js
+├── tests
+│   ├── Feature
+│   │   ├── Auth
+│   │   │   ├── AuthenticationTest.php
+│   │   │   ├── EmailVerificationTest.php
+│   │   │   ├── PasswordConfirmationTest.php
+│   │   │   ├── PasswordResetTest.php
+│   │   │   ├── PasswordUpdateTest.php
+│   │   │   └── RegistrationTest.php
+│   │   ├── BackendViewSuperAdminTest.php
+│   │   └── FrontendPublicViewTest.php
+│   ├── TestCase.php
+│   └── Unit
+│       └── ExampleTest.php
+├── vite.config.js
+└── yarn.lock
+
+262 directories, 770 files

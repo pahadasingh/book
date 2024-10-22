@@ -1,0 +1,9 @@
+Win + Q/S
+Win + .
+Win + 1/2/3
+Win + PrintScreen
+Win + ctrl + ▶◀
+Shift + F10
+Alt + Space
+Win + E
+Ctrl + DblCLick

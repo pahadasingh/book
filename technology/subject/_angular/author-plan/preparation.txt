@@ -1,0 +1,91 @@
+Tool For Creating a Book
+
+Angular Guide Book
+Book Like: https://www.joshwcomeau.com/animation/css-transitions/
+--------------------------------------
+Each Chapter Followed by 
+	- Summary + Quiz + Assignment
+	
+
+Contents
+-------------------------------------
+Chapter - 1
+Features of a standalone component & when to use it(usecases) in angular project
+What is the complete use case, difference between standalone component and normal component: 
+what is the element in angular and usecases; https://rentry.co/2ufbwvk5
+ng web-component limitation; https://rentry.co/d56f5839
+
+Chapter - 2
+Different way of running angular project in local
+using webpack
+using parcel
+
+Chapter - 3
+ngRx different versions and comparison
+where are all ngRx are used, 
+use cases of ngrx in different prject and stckblitz link
+
+Chapter - 4
+How to use stencil in angular project as one of the web component.
+Stencil usecases
+
+
+chapter - 5
+use cases of directive
+ex. lazy load of images
+    base directive
+	base pipe
+	custom anchor tags using directives
+	
+chapter - 6
+List all the angular commands
+
+
+chapter - 7
+How to do internationislation
+
+chapter - 8
+How to do SSR and SSG
+
+
+chapter - 9
+Angular Shell / PWA
+Service Worker
+
+
+chapter - 10
+  Assets Setttings
+  Icons/
+  Variables/
+  web-componets/
+  
+chapter - 11
+  External Library for multiple project
+  ex. d3 chart
+  
+chapter - 12
+Initial Setups
+- package.json
+- webpack.json
+- .husky
+- .github
+- .prettify
+- different configuration like Vite and esbuild , webpack
+- Ensure you have Node.js version 18.13.0 or newer and TypeScript 5.2 installed.
+
+
+chapter - 13
+ About Typescript
+ summary
+ Quiz
+ Assignment
+
+
+Chapter - n: How to Give Demo to prodcut manager and stake holders after task is finished.
+
+
+===================================
+1. taking a displine brake and coming back to my work
+2. checking my stomach temp each moment
+3. each 2 min -- breath checking
+4. 

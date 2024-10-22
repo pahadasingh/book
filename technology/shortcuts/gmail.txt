@@ -1,0 +1,39 @@
+Here are some useful keyboard shortcuts for Gmail:
+
+### General Shortcuts:
+- **C**: Compose a new email.
+- **/ (forward slash)**: Move the cursor to the search box.
+- **K**: Move to a newer conversation.
+- **J**: Move to an older conversation.
+- **N**: Move to the next message.
+- **P**: Move to the previous message.
+- **U**: Return to inbox.
+- **E**: Archive email.
+- **Shift + U**: Mark as unread.
+- **Shift + I**: Mark as read.
+
+### Email Actions:
+- **R**: Reply to email.
+- **A**: Reply all.
+- **F**: Forward email.
+- **#**: Delete email.
+- **!**: Report spam.
+- **Shift + R**: Reply in a new window.
+- **Shift + A**: Reply all in a new window.
+- **G + A**: Go to All mail.
+- **G + D**: Go to Drafts.
+- **G + S**: Go to Starred emails.
+- **Shift + C**: Compose in a new window.
+
+### Formatting (when composing):
+- **Ctrl + B**: Bold.
+- **Ctrl + I**: Italic.
+- **Ctrl + U**: Underline.
+
+Make sure Gmail keyboard shortcuts are enabled. To enable them:
+1. Go to **Settings** (gear icon in Gmail).
+2. Select **See all settings**.
+3. In the **General** tab, scroll down to **Keyboard shortcuts**.
+4. Select **Keyboard shortcuts on**.
+
+Let me know if you'd like more shortcuts!
