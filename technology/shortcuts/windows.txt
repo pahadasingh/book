@@ -1,9 +1,12 @@
 Win + Q/S
 Win + .
-Win + 1/2/3
-Win + PrintScreen
-Win + ctrl + ▶◀
-Shift + F10
-Alt + Space
-Win + E
-Ctrl + DblCLick
+Win + 1/2/3 ----> OPen TAskbar Application
+Win + PrintScreen ---> screen capture
+Win + ctrl + ▶◀  ---> move screens
+Shift + F10   ----> right click
+Alt + Space  ---> 
+Win + E   ----> Explorere
+Ctrl + DblCLick  ----> close
+Ctrl + Shift + Esc ----> Taskmanager
+Win + ,  ----> view Desktop
+Ctrl + shift + 1/2/3/4/5/6  ---> Differnet View Folders 
